@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    document.getElementsByTagName("html")[0].className += " js";
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>
+    !window.jQuery && document.write('<script src="assets/js/jquery-1.6.1.min.js"><\/script>')
+  </script>
+  <title></title>
+</head>
+
+<body>
+  <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+
+    <!-- <div class="cd-h-timeline__container container"> -->
+      <!-- <div class="cd-h-timeline__dates">
+        <div class="cd-h-timeline__line">
+          <ol>
+            <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">16 Jan</a>
+            </li>
+            <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">28 Feb</a></li>
+            <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">20 Mar</a></li>
+            <li><a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">20 May</a></li>
+            <li><a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">09 Jul</a></li>
+            <li><a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">30 Aug</a></li>
+            <li><a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">15 Sep</a></li>
+            <li><a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">01 Nov</a></li>
+            <li><a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">10 Dec</a></li>
+            <li><a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">29 Jan</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">3 Mar</a></li>
+          </ol>
+
+          <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+        </div> .cd-h-timeline__line -->
+      <!-- </div> .cd-h-timeline__dates -->
+
+      <!-- <ul>
+        <li><a href="#0"
+            class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a>
+        </li>
+        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
+      </ul>
+    </div> .cd-h-timeline__container -->
+
+    <div class="cd-h-timeline__events">
+      <ol>
+        <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+          <div class="cd-h-timeline__event-content container">
+            <a href="index.html"><img id="bg3-1" class="responsive" src="assets/img/Slide_1.svg" width="529"
+                height="600" alt="Page 2" /></a>
+          </div>
+        </li>
+
+
+        <!-- Second Page -->
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+
+            <div id="tutorial_container">
+              <div id="left-side">
+                <div id="header_left">
+                  <h1 class="headerH1">Clickable items:</h1>
+                </div>
+                <ul>
+                  <li class="pointerIcn active">
+                    <div class="icon active">
+                    <img id="pointer_left" src="assets/icons/pointer.png">
+                    </div>
+                    Pointers
+                  </li>
+                  <li class="clickableIcn">
+                    <div class="icon">
+                    <img id="pointer_left" src="assets/icons/eye.png">
+                    </div>
+                    Objects
+                  </li>
+                  <li class="timelineIcn">
+                    <div class="icon">
+                    <img id="pointer_left" src="assets/icons/timeline.png">
+                    </div>
+                    Timeline
+                  </li>
+                  <li class="audioIcn">
+                    <div class="icon">
+                    <img id="pointer_left" src="assets/icons/audio.png">
+                    </div>
+                    Audio
+                  </li>
+                </ul>
+              </div>
+              
+              <div id="border">
+                <div id="line" class="one"></div>
+              </div>
+              
+              <div id="right-side">
+              <div id="first" class="active">
+                <div class="icon big">
+                  <img id="pointer_right" src="assets/icons/lakeridge_logo.gif">
+                </div>
+                <h1>Cursor Pointer</h1>
+                <div class="content_right">
+                  <p>When your mouse pointer hovers over a clickable item, it will turn into a hand cursor and you can click on that item.</p>
+                  <p>Clicking on an item will give you more information.</p>
+                </div>
+              </div>
+              <div id="second">
+                <div class="icon big">
+                  <img id="pointer_right" src="assets/icons/lakeridge_logo_glowing.gif">
+                </div>
+                <h1>Clickable Objects</h1>
+                <div class="content_right">
+                  <p>When using mobile devices your cursor will not change into a pointer. Look out for items with an eye symbol. You can click items on the screen with the eye symbol next to them.</p>
+                  <p>Clicking on these items will give you more information.</p>
+                </div>
+              </div>
+              <div id="third">
+                <div class="icon big">
+                  <img id="pointer_right" src="assets/icons/timeline.gif">
+                </div>
+                <h1>Timeline</h1>
+                <div class="content_right">
+                  <p>You can navigate the screens by clicking on the timeline or the small dots at the bottom of the screen.</p>
+                  <p>Clicking on a dot takes you to its respective screen.</p>
+                </div>
+              </div>
+              <div id="fourth">
+                <div class="icon big">
+                  <img id="pointer_right1" src="assets/icons/audio.gif">
+                </div>
+                <h1>Audio</h1>
+                <div class="content_right">
+                  <p>Clicking on the audio icon will play an audio sound.</p>
+                </div>
+              </div>
+              </div>
+            </div>
+
+          </div>
+        </li>
+
+        <!-- Third Page -->
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <img id="bg3-1" class="responsive" src="assets/img/page_3.svg" width="529"
+              height="600" alt="Page 3" />
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+
+          </div>
+        </li>
+      </ol>
+    </div> <!-- .cd-h-timeline__events -->
+
+    <div class="cd-h-timeline__container container">
+      <div class="cd-h-timeline__dates">
+        <div class="cd-h-timeline__line">
+          <ol>
+            <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">16 Jan</a>
+            </li>
+            <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">28 Feb</a></li>
+            <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">20 Mar</a></li>
+            <li><a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">20 May</a></li>
+            <li><a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">09 Jul</a></li>
+            <li><a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">30 Aug</a></li>
+            <li><a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">15 Sep</a></li>
+            <!-- <li><a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">01 Nov</a></li>
+            <li><a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">10 Dec</a></li>
+            <li><a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">29 Jan</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">3 Mar</a></li> -->
+          </ol>
+
+          <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+        </div> <!-- .cd-h-timeline__line -->
+      </div> <!-- .cd-h-timeline__dates -->
+
+      <ul>
+        <li><a href="#0"
+            class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a>
+        </li>
+        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
+      </ul>
+    </div> <!-- .cd-h-timeline__container -->
+
+
+  </section>
+  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tutorial.js"></script>
+</body>
+
+</html>
