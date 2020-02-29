@@ -1,6 +1,6 @@
 (function () {
     // Horizontal Timeline - by CodyHouse.co
-    let HorizontalTimeline = function (element) {
+    var HorizontalTimeline = function (element) {
         this.element = element;
         this.datesContainer = this.element.getElementsByClassName('cd-h-timeline__dates')[0];
         this.line = this.datesContainer.getElementsByClassName('cd-h-timeline__line')[0]; // grey line in the top timeline section
@@ -28,10 +28,10 @@
 
     function initTimeline(timeline) {
         // set dates left position
-        let left = 0;
-        for (let i = 0; i < timeline.dateValues.length; i++) {
-            let j = (i == 0) ? 0 : i - 1;
-            let distance = daydiff(timeline.dateValues[j], timeline.dateValues[i]),
+        var left = 0;
+        for (var i = 0; i < timeline.dateValues.length; i++) {
+            var j = (i == 0) ? 0 : i - 1;
+            var distance = daydiff(timeline.dateValues[j], timeline.dateValues[i]),
                 distanceNorm = (Math.round(distance / timeline.minLapse) + 2) * timeline.eventsMinDistance;
 
             if (distanceNorm < timeline.eventsMinDistance) {
@@ -53,7 +53,7 @@
     };
 
     function initEvents(timeline) {
-        let self = timeline;
+        var self = timeline;
         // click on arrow navigation
         self.navigation[0].addEventListener('click', function (event) {
             event.preventDefault();
@@ -74,7 +74,7 @@
         });
 
         //select a new event
-        for (let i = 0; i < self.date.length; i++) {
+        for (var i = 0; i < self.date.length; i++) {
             (function (i) {
                 self.date[i].addEventListener('click', function (event) {
                     event.preventDefault();
@@ -89,7 +89,7 @@
     };
 
     function updateFilling(timeline) { // update fillingLine scale value
-        let dateStyle = window.getComputedStyle(timeline.selectedDate, null),
+        var dateStyle = window.getComputedStyle(timeline.selectedDate, null),
             left = dateStyle.getPropertyValue("left"),
             width = dateStyle.getPropertyValue("width");
 
@@ -98,7 +98,7 @@
     };
 
     function translateTimeline(timeline, direction) { // translate timeline (and date elements)
-        let containerWidth = timeline.datesContainer.offsetWidth;
+        var containerWidth = timeline.datesContainer.offsetWidth;
         if (direction) {
             timeline.translate = (direction == 'next') ? timeline.translate - containerWidth + timeline.eventsMinDistance : timeline.translate + containerWidth - timeline.eventsMinDistance;
         }
@@ -123,20 +123,20 @@
     };
 
     function updateOlderEvents(timeline) { // update older events style
-        for (let i = 0; i < timeline.date.length; i++) {
+        for (var i = 0; i < timeline.date.length; i++) {
             (i < timeline.newDateIndex) ? Util.addClass(timeline.date[i], 'cd-h-timeline__date--older-event'): Util.removeClass(timeline.date[i], 'cd-h-timeline__date--older-event');
         }
     };
 
     function updateVisibleContent(timeline) { // show content of new selected date
         if (timeline.newDateIndex > timeline.oldDateIndex) {
-            let classEntering = 'cd-h-timeline__event--selected cd-h-timeline__event--enter-right',
+            var classEntering = 'cd-h-timeline__event--selected cd-h-timeline__event--enter-right',
                 classLeaving = 'cd-h-timeline__event--leave-left';
         } else if (timeline.newDateIndex < timeline.oldDateIndex) {
-            let classEntering = 'cd-h-timeline__event--selected cd-h-timeline__event--enter-left',
+            var classEntering = 'cd-h-timeline__event--selected cd-h-timeline__event--enter-left',
                 classLeaving = 'cd-h-timeline__event--leave-right';
         } else {
-            let classEntering = 'cd-h-timeline__event--selected',
+            var classEntering = 'cd-h-timeline__event--selected',
                 classLeaving = '';
         }
 
@@ -155,14 +155,14 @@
     };
 
     function keyNavigateTimeline(timeline, direction) { // navigate the timeline using the keyboard
-        let newIndex = (direction == 'next') ? timeline.newDateIndex + 1 : timeline.newDateIndex - 1;
+        var newIndex = (direction == 'next') ? timeline.newDateIndex + 1 : timeline.newDateIndex - 1;
         if (newIndex < 0 || newIndex >= timeline.date.length) return;
         selectNewDate(timeline, timeline.date[newIndex]);
         resetTimelinePosition(timeline, direction);
     };
 
     function resetTimelinePosition(timeline, direction) { //translate timeline according to new selected event position
-        let eventStyle = window.getComputedStyle(timeline.selectedDate, null),
+        var eventStyle = window.getComputedStyle(timeline.selectedDate, null),
             eventLeft = Number(eventStyle.getPropertyValue('left').replace('px', '')),
             timelineWidth = timeline.datesContainer.offsetWidth;
 
@@ -173,31 +173,31 @@
     };
 
     function parseDate(timeline) { // get timestamp value for each date
-        let dateArrays = [];
-        for (let i = 0; i < timeline.date.length; i++) {
-            let singleDate = timeline.date[i].getAttribute('data-date'),
+        var dateArrays = [];
+        for (var i = 0; i < timeline.date.length; i++) {
+            var singleDate = timeline.date[i].getAttribute('data-date'),
                 dateComp = singleDate.split('T');
 
             if (dateComp.length > 1) { //both DD/MM/YEAR and time are provided
-                let dayComp = dateComp[0].split('/'),
+                var dayComp = dateComp[0].split('/'),
                     timeComp = dateComp[1].split(':');
             } else if (dateComp[0].indexOf(':') >= 0) { //only time is provide
-                let dayComp = ["2000", "0", "0"],
+                var dayComp = ["2000", "0", "0"],
                     timeComp = dateComp[0].split(':');
             } else { //only DD/MM/YEAR
-                let dayComp = dateComp[0].split('/'),
+                var dayComp = dateComp[0].split('/'),
                     timeComp = ["0", "0"];
             }
-            let newDate = new Date(dayComp[2], dayComp[1] - 1, dayComp[0], timeComp[0], timeComp[1]);
+            var newDate = new Date(dayComp[2], dayComp[1] - 1, dayComp[0], timeComp[0], timeComp[1]);
             dateArrays.push(newDate);
         }
         return dateArrays;
     };
 
     function calcMinLapse(timeline) { // determine the minimum distance among events
-        let dateDistances = [];
-        for (let i = 1; i < timeline.dateValues.length; i++) {
-            let distance = daydiff(timeline.dateValues[i - 1], timeline.dateValues[i]);
+        var dateDistances = [];
+        for (var i = 1; i < timeline.dateValues.length; i++) {
+            var distance = daydiff(timeline.dateValues[i - 1], timeline.dateValues[i]);
             if (distance > 0) dateDistances.push(distance);
         }
 
@@ -210,10 +210,10 @@
 
     window.HorizontalTimeline = HorizontalTimeline;
 
-    let horizontalTimeline = document.getElementsByClassName('js-cd-h-timeline'),
+    var horizontalTimeline = document.getElementsByClassName('js-cd-h-timeline'),
         horizontalTimelineTimelineArray = [];
     if (horizontalTimeline.length > 0) {
-        for (let i = 0; i < horizontalTimeline.length; i++) {
+        for (var i = 0; i < horizontalTimeline.length; i++) {
             horizontalTimelineTimelineArray.push(new HorizontalTimeline(horizontalTimeline[i]));
         }
         // navigate the timeline when inside the viewport using the keyboard
@@ -227,20 +227,20 @@
     };
 
     function updateHorizontalTimeline(direction) {
-        for (let i = 0; i < horizontalTimelineTimelineArray.length; i++) {
+        for (var i = 0; i < horizontalTimelineTimelineArray.length; i++) {
             if (elementInViewport(horizontalTimeline[i])) keyNavigateTimeline(horizontalTimelineTimelineArray[i], direction);
         }
     };
 
     /*
-		How to tell if a DOM element is visible in the current viewport?
-		http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-	*/
+          How to tell if a DOM element is visible in the current viewport?
+          http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+      */
     function elementInViewport(el) {
-        let top = el.offsetTop;
-        let left = el.offsetLeft;
-        let width = el.offsetWidth;
-        let height = el.offsetHeight;
+        var top = el.offsetTop;
+        var left = el.offsetLeft;
+        var width = el.offsetWidth;
+        var height = el.offsetHeight;
 
         while (el.offsetParent) {
             el = el.offsetParent;
