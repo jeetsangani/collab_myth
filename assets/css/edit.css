@@ -1,3 +1,15 @@
-img{
+responsive{
     width: 1000px;
+}
+
+#branding {
+	width: 100%;
+	background-color: rgba(239, 212, 255, 0.692);
+	padding: 15px 10px 15px 30px;
+}
+
+#branding img {
+    text-align: center;
+    max-height: 100px;
+    max-width: 200px;
 }
