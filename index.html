@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/edit.css">
   <link rel="stylesheet" href="assets/css/landscape.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/app.css">
   <script>
     !window.jQuery && document.write('<script src="assets/js/jquery-1.6.1.min.js"><\/script>')
   </script>
@@ -19,17 +21,17 @@
 
 <body>
 
-  <div id="warning-message">
+  <div id="warning-message" class="large-12 cell">
 
-    this website is only viewable in landscape mode
+    <p>This website is only viewable in landscape mode</p>
     <img src="assets/icons/giphy.gif">
 
-	</div>
+  </div>
 
   <section id="wrapper" class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
 
     <!-- <div class="cd-h-timeline__container container"> -->
-      <!-- <div class="cd-h-timeline__dates">
+    <!-- <div class="cd-h-timeline__dates">
         <div class="cd-h-timeline__line">
           <ol>
             <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">16 Jan</a>
@@ -48,9 +50,9 @@
 
           <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
         </div> .cd-h-timeline__line -->
-      <!-- </div> .cd-h-timeline__dates -->
+    <!-- </div> .cd-h-timeline__dates -->
 
-      <!-- <ul>
+    <!-- <ul>
         <li><a href="#0"
             class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a>
         </li>
@@ -59,8 +61,8 @@
     </div> .cd-h-timeline__container -->
 
     <header id="branding">
-			<a href="index.html"><img src="assets/img/lakeridge-logo.png"></a>
-		</header>
+      <a href="index.html"><img src="assets/img/lakeridge-logo.png"></a>
+    </header>
 
     <div class="cd-h-timeline__events">
       <ol>
@@ -83,75 +85,78 @@
                 <ul>
                   <li class="pointerIcn active">
                     <div class="icon active">
-                    <img id="pointer_left" src="assets/icons/pointer.png">
+                      <img id="pointer_left" src="assets/icons/pointer.png">
                     </div>
                     Pointers
                   </li>
                   <li class="clickableIcn">
                     <div class="icon">
-                    <img id="pointer_left" src="assets/icons/eye.png">
+                      <img id="pointer_left" src="assets/icons/eye.png">
                     </div>
                     Objects
                   </li>
                   <li class="timelineIcn">
                     <div class="icon">
-                    <img id="pointer_left" src="assets/icons/timeline.png">
+                      <img id="pointer_left" src="assets/icons/timeline.png">
                     </div>
                     Timeline
                   </li>
                   <li class="audioIcn">
                     <div class="icon">
-                    <img id="pointer_left" src="assets/icons/audio.png">
+                      <img id="pointer_left" src="assets/icons/audio.png">
                     </div>
                     Audio
                   </li>
                 </ul>
               </div>
-              
+
               <div id="border">
                 <div id="line" class="one"></div>
               </div>
-              
+
               <div id="right-side">
-              <div id="first" class="active">
-                <div class="icon big">
-                  <img id="pointer_right" src="assets/icons/lakeridge_logo.gif">
+                <div id="first" class="active">
+                  <div class="icon big">
+                    <img id="pointer_right" src="assets/icons/lakeridge_logo.gif">
+                  </div>
+                  <h1>Cursor Pointer</h1>
+                  <div class="content_right">
+                    <p>When your mouse pointer hovers over a clickable item, it will turn into a hand cursor and you can
+                      click on that item.</p>
+                    <p>Clicking on an item will give you more information.</p>
+                  </div>
                 </div>
-                <h1>Cursor Pointer</h1>
-                <div class="content_right">
-                  <p>When your mouse pointer hovers over a clickable item, it will turn into a hand cursor and you can click on that item.</p>
-                  <p>Clicking on an item will give you more information.</p>
+                <div id="second">
+                  <div class="icon big">
+                    <img id="pointer_right" src="assets/icons/lakeridge_logo_glowing.gif">
+                  </div>
+                  <h1>Clickable Objects</h1>
+                  <div class="content_right">
+                    <p>When using mobile devices your cursor will not change into a pointer. Look out for items with an
+                      eye symbol. You can click items on the screen with the eye symbol next to them.</p>
+                    <p>Clicking on these items will give you more information.</p>
+                  </div>
                 </div>
-              </div>
-              <div id="second">
-                <div class="icon big">
-                  <img id="pointer_right" src="assets/icons/lakeridge_logo_glowing.gif">
+                <div id="third">
+                  <div class="icon big">
+                    <img id="pointer_right" src="assets/icons/timeline.gif">
+                  </div>
+                  <h1>Timeline</h1>
+                  <div class="content_right">
+                    <p>You can navigate the screens by clicking on the timeline or the small dots at the bottom of the
+                      screen.</p>
+                    <p>Clicking on a dot takes you to its respective screen.</p>
+                  </div>
                 </div>
-                <h1>Clickable Objects</h1>
-                <div class="content_right">
-                  <p>When using mobile devices your cursor will not change into a pointer. Look out for items with an eye symbol. You can click items on the screen with the eye symbol next to them.</p>
-                  <p>Clicking on these items will give you more information.</p>
+                <div id="fourth">
+                  <div class="icon big">
+                    <img id="pointer_right1" src="assets/icons/audio.gif">
+                  </div>
+                  <h1>Audio</h1>
+                  <div class="content_right">
+                    <p>Clicking on the audio icon will play an audio sound.</p>
+                  </div>
                 </div>
-              </div>
-              <div id="third">
-                <div class="icon big">
-                  <img id="pointer_right" src="assets/icons/timeline.gif">
-                </div>
-                <h1>Timeline</h1>
-                <div class="content_right">
-                  <p>You can navigate the screens by clicking on the timeline or the small dots at the bottom of the screen.</p>
-                  <p>Clicking on a dot takes you to its respective screen.</p>
-                </div>
-              </div>
-              <div id="fourth">
-                <div class="icon big">
-                  <img id="pointer_right1" src="assets/icons/audio.gif">
-                </div>
-                <h1>Audio</h1>
-                <div class="content_right">
-                  <p>Clicking on the audio icon will play an audio sound.</p>
-                </div>
-              </div>
               </div>
             </div>
 
@@ -195,7 +200,8 @@
       <div class="cd-h-timeline__dates">
         <div class="cd-h-timeline__line">
           <ol>
-            <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">Introduction Page</a>
+            <li><a href="#0" data-date="16/01/2014"
+                class="cd-h-timeline__date cd-h-timeline__date--selected">Introduction Page</a>
             </li>
             <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">Tutorial Page</a></li>
             <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">Myth 1</a></li>
@@ -227,6 +233,10 @@
   <script src="assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/tutorial.js"></script>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
