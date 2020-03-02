@@ -132,34 +132,34 @@ body {
     border-color: var(--cd-color-2);
   }
 
-  .cd-h-timeline__navigation { // arrows to navigate the timeline
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 34px;
-    width: 34px;
-    border-radius: 50%;
-    border-width: 2px;
-    border-style: solid;
-    border-color: lightness(var(--cd-color-3), 0.9);
-    transition: border-color 0.3s;
+  // .cd-h-timeline__navigation { // arrows to navigate the timeline
+  //   position: absolute;
+  //   z-index: 1;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   height: 34px;
+  //   width: 34px;
+  //   border-radius: 50%;
+  //   border-width: 2px;
+  //   border-style: solid;
+  //   border-color: lightness(var(--cd-color-3), 0.9);
+  //   transition: border-color 0.3s;
     
-    &::after { // arrow icon
-      content: '';
-      position: absolute;
-      height: 16px;
-      width: 16px;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      background: url(../img/cd-arrow.svg) no-repeat 0 0;
-    }
+  //   &::after { // arrow icon
+  //     content: '';
+  //     position: absolute;
+  //     height: 16px;
+  //     width: 16px;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translateX(-50%) translateY(-50%);
+  //     background: url(../img/cd-arrow.svg) no-repeat 0 0;
+  //   }
 
-    &:hover {
-      border-color: var(--cd-color-2);
-    }
-  }
+  //   &:hover {
+  //     border-color: var(--cd-color-2);
+  //   }
+  // }
 
   .cd-h-timeline__navigation--prev {
     left: 0;
