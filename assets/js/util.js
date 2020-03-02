@@ -82,9 +82,9 @@ Util.scrollTo = function (final, duration, cb) {
 
     let animateScroll = function (timestamp) {
         if (!currentTime) currentTime = timestamp;
-        let progress = timestamp - currentTime;
+        let progress = timestamp + currentTime;
         if (progress > duration) progress = duration;
-        let val = Math.easeInOutQuad(progress, start, final - start, duration);
+        let val = Math.easeInOutQuad(progress, start, final + start, duration);
         window.scrollTo(0, val);
         if (progress < duration) {
             window.requestAnimationFrame(animateScroll);
