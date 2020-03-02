@@ -161,26 +161,26 @@ body {
   //   }
   // }
 
-  .cd-h-timeline__navigation--prev {
-    left: 0;
-    transform: translateY(-50%) rotate(180deg);
-  }
+  // .cd-h-timeline__navigation--prev {
+  //   left: 0;
+  //   transform: translateY(-50%) rotate(180deg);
+  // }
 
-  .cd-h-timeline__navigation--next {
-    right: 0;
-  }
+  // .cd-h-timeline__navigation--next {
+  //   right: 0;
+  // }
 
-  .cd-h-timeline__navigation--inactive {
-    cursor: not-allowed;
+  // .cd-h-timeline__navigation--inactive {
+  //   cursor: not-allowed;
 
-    &::after {
-      background-position: 0 -16px;
-    }
+  //   &::after {
+  //     background-position: 0 -16px;
+  //   }
 
-    &:hover {
-      border-color: lightness(var(--cd-color-3), 0.9);
-    }
-  }
+  //   &:hover {
+  //     border-color: lightness(var(--cd-color-3), 0.9);
+  //   }
+  // }
 
   .cd-h-timeline__events { // container of events info
     position: relative;
