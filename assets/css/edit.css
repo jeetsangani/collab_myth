@@ -2,10 +2,30 @@
     width: 1000px;
 } */
 
+:root {
+    --cd-color-1:
+        hsl(0, 0%, 22%);
+    --cd-color-1-h: 0;
+    --cd-color-1-s: 0%;
+    --cd-color-1-l: 22%;
+    --cd-color-2:
+        hsl(74, 93%, 32%);
+    --cd-color-2-h: 74;
+    --cd-color-2-s: 93%;
+    --cd-color-2-l: 32%;
+    --cd-color-3: none;
+    --cd-color-3-h: 0;
+    --cd-color-3-s: 0%;
+    --cd-color-3-l: 97%;
+    --font-primary: 'Fira Sans', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+}
+
+
 #branding {
-	width: 100%;
-	background-color: rgba(239, 212, 255, 0.692);
-	padding: 15px 10px 15px 30px;
+    width: 100%;
+    background-color: rgba(239, 212, 255, 0.692);
+    padding: 15px 10px 15px 30px;
 }
 
 #branding img {
@@ -17,5 +37,5 @@
 
 .js .cd-h-timeline__navigation {
     border-style: none;
-    
+
 }
