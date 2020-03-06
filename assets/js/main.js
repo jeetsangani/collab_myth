@@ -1,5 +1,4 @@
 (function () {
-    // Horizontal Timeline - by CodyHouse.co
     var HorizontalTimeline = function (element) {
         this.element = element;
         this.datesContainer = this.element.getElementsByClassName('cd-h-timeline__dates')[0];
@@ -51,7 +50,7 @@
         selectNewDate(timeline, timeline.selectedDate);
         resetTimelinePosition(timeline, 'next');
     };
-
+2
     function initEvents(timeline) {
         var self = timeline;
         // click on arrow navigation

@@ -3912,14 +3912,17 @@ body {
 
 .js .cd-h-timeline__event--enter-right,
 .js .cd-h-timeline__event--leave-right {
+
     -webkit-animation-name: cd-enter-right;
-    animation-name: cd-enter-right
+    animation-name: cd-enter-right;
+    animation-duration: 2s;
 }
 
 .js .cd-h-timeline__event--enter-left,
 .js .cd-h-timeline__event--leave-left {
     -webkit-animation-name: cd-enter-left;
-    animation-name: cd-enter-left
+    animation-name: cd-enter-left;
+    animation-duration: 2s;
 }
 
 .js .cd-h-timeline__event--leave-right,
