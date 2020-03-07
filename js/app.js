@@ -548,32 +548,32 @@ window.onload = function () {
     }
 
     // add/remove items on button click
-    // document.getElementById('fadein1').onclick = fadeInScreen1;
+    document.getElementById('fadein1').onclick = fadeInScreen1;
     // document.getElementById('fadeout1').onclick = fadeOutScreen1;
-    // document.getElementById('fadein2').onclick = fadeInScreen2;
+    document.getElementById('fadein2').onclick = fadeInScreen2;
     // document.getElementById('fadeout2').onclick = fadeOutScreen2;
-    // document.getElementById('fadein3').onclick = fadeInScreen3;
+    document.getElementById('fadein3').onclick = fadeInScreen3;
     // document.getElementById('fadeout3').onclick = fadeOutScreen3;
-    // document.getElementById('fadein4').onclick = fadeInScreen4;
+    document.getElementById('fadein4').onclick = fadeInScreen4;
     // document.getElementById('fadeout4').onclick = fadeOutScreen4;
-    // document.getElementById('fadein5').onclick = fadeInScreen5;
+    document.getElementById('fadein5').onclick = fadeInScreen5;
     // document.getElementById('fadeout5').onclick = fadeOutScreen5;
 
-    function checkPageFocus() {
+    // function checkPageFocus() {
 
-        // Targeting div for checking focus
-        let firstFocus = document.querySelector('#firstFocus')
-        let check = document.activeElement.classList;
+    //     // Targeting div for checking focus
+    //     let firstFocus = document.querySelector('#firstFocus')
+    //     let check = document.activeElement.classList;
         
-        if (check) {
-            firstFocus.classList.add("addCss");
-        }
-        else{
-            firstFocus.classList.remove("addCss");
-        }
-        console.log(check);
-    }
+    //     if (check) {
+    //         firstFocus.classList.add("addCss");
+    //     }
+    //     else{
+    //         firstFocus.classList.remove("addCss");
+    //     }
+    //     console.log(check);
+    // }
 
-    setInterval(checkPageFocus, 300);
+    // setInterval(checkPageFocus, 300);
 
 }
