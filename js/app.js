@@ -1,10 +1,10 @@
-window.onload = function checkPageFocus(){
+window.onload = function(){
     // targeting the svg objects in the html
-    let first = document.getElementById('first').contentDocument;
-    let second = document.getElementById('second').contentDocument;
-    let third = document.getElementById('third').contentDocument;
-    let fourth = document.getElementById('fourth').contentDocument;
-    let fifth = document.getElementById('fifth').contentDocument;
+    let first = document.getElementById('firstPage').contentDocument;
+    let second = document.getElementById('secondPage').contentDocument;
+    let third = document.getElementById('thirdPage').contentDocument;
+    let fourth = document.getElementById('fourthPage').contentDocument;
+    let fifth = document.getElementById('fifthPage').contentDocument;
     let next = document.getElementById('next').contentDocument;
 
     // targeting individual objects in the svg object
@@ -17,22 +17,26 @@ window.onload = function checkPageFocus(){
     let cageLeft = second.getElementById('cageLeft');
     let cageRight = second.getElementById('cageRight');
     let person = second.getElementById('person');
-    let background = second.getElementById('background');
+    let guineaPig = second.getElementById('guineaPig');
+    let guineaPig2 = second.getElementById('guineaPig-2');
 
     // second myth
     let glowClipboard = third.getElementById('glowClipboard');
     let glowJacket = third.getElementById('glowJacket');
     let myth2Title = third.getElementById('title');
-    let background2 = third.getElementById('background');
     let doctor = third.getElementById('doctor');
     let person2 = third.getElementById('person');
+    let clipboard = third.getElementById('clipboard');
+    // let wink = third.getElementById('wink');
+    let jacket = third.getElementById('jacket');
 
     // third myth
     let glowChart = fourth.getElementById('glowChart');
     let glowMatress = fourth.getElementById('glowMatress');
     let myth3Title = fourth.getElementById('title');
-    let background3 = fourth.getElementById('background');
     let bed = fourth.getElementById('bed');
+    let matress = fourth.getElementById('matress');
+    let chart = fourth.getElementById('chart');
     let person3 = fourth.getElementById('person');
 
     // fourth myth
@@ -40,10 +44,12 @@ window.onload = function checkPageFocus(){
     let glowBottle = fifth.getElementById('glowBottle');
     let glowBottleEnd = fifth.getElementById('glowBottleEnd');
     let myth4Title = fifth.getElementById('title');
-    let background4 = fifth.getElementById('background');
     let table2 = fifth.getElementById('table');
     let person4 = fifth.getElementById('person');
     let beakers = fifth.getElementById('beakers');
+    let greenBeaker = fifth.getElementById('greenBeaker-2');
+    let purpleBeaker = fifth.getElementById('purplebeaker-2');
+    let needle = fifth.getElementById('needle');
 
     // last screen
     let nextSteps = next.getElementById('nextSteps');
@@ -55,6 +61,9 @@ window.onload = function checkPageFocus(){
     let fadeIn_3 = new TimelineMax();
     let fadeIn_4 = new TimelineMax();
     let fadeIn_5 = new TimelineMax();
+    // let guineaPigShake = new TimelineMax({repeat: -1});
+    // let guineaPigShake2 = new TimelineMax({repeat: -1});
+    // let winkwink = new TimelineMax({repeat: -1});
 
     let fadeOut_1 = new TimelineMax();
     let fadeOut_2 = new TimelineMax();
@@ -65,7 +74,7 @@ window.onload = function checkPageFocus(){
 
     // code to make first slide fade in
 // function reset(){
-//     TweenMax.set([myth1Title,myth2Title,table, cageLeft,person, cageRight,glowRight, glowLeft, glowPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd  ],{
+//     TweenMax.set([myth1Title,myth2Title,table, cageLeft,person, cageRight,glowRight, glowLeft, glowPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, beakers, nextSteps, info],{
 //         clearProps: "all"
 //     })
 //     }
@@ -73,219 +82,437 @@ window.onload = function checkPageFocus(){
 // functions to make items fade in or appear
 function fadeInScreen1 (clicked) {
     reset()
-        fadeIn_1.fromTo(background, 1, {
-            opacity: 0
+    // animate title
+    TweenMax.set(myth1Title, {
+        transformOrigin: "center center"
+    })
+        fadeIn_1
+        .fromTo(myth1Title, 1, {
+            opacity: 0,
+            scale: 0
         },{
+            scale: 1.1,
             opacity: 1,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
         .to(myth1Title, 1, {
-            opacity: 1
+            scale: 1,
+            ease: "power1.inOut"
         })
         .fromTo(myth1Title, 1,{
-            opacity: 0,
             y: 200,
             x: 300, 
         },{
-            opacity: 1,
             y:0,
             x:0,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
-        .fromTo(person, 1, {
+        // animate person
+        .fromTo(person, .7, {
             opacity: 1,
             x: -300,
         },{
             x:0,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
-        .fromTo([table, cageLeft, cageRight], 1, {
-            display: 'block',
+        // animate table
+        .fromTo(table, .7, {
+            opacity: 1,
+            x: 700
+        },{
+            x: 0,
+            ease: "power1.inOut"
+        })
+        // animat cages
+        .staggerFromTo([cageLeft, cageRight], .5, {
             opacity: 0,
-            ease: "power2.out"
+            ease: "power1.inOut"
         },{
             opacity:1,
-            ease: "power2.out"
-        })
-        .fromTo([glowRight, glowLeft, glowPerson],1,{
-            display: 'block',
+            ease: "power1.inOut"
+        },.5)
+        // add in glows
+        .fromTo([glowRight, glowLeft, glowPerson],.5,{
             opacity: 0
         },{
             opacity: 0.25
         })
-
+        // animate glows
         glowItems();
+        // animate guinea pigs
+        // guineaPigShake
+        // .fromTo(guineaPig, 0.01, {
+        //     x:-4
+        // },{
+        //     x:4, 
+        //     clearProps:"x", 
+        //     repeat:20,
+        // },3)
+        // guineaPigShake2
+        // .fromTo(guineaPig2, 0.01, {
+        //     x:-4
+        // },{
+        //     x:4, 
+        //     clearProps:"x", 
+        //     repeat:20,
+        //     delay: 1
+        // },3)
 
+        // change cursor to pointer on clickable items
+        cageLeft.style.cursor = "pointer";
+        cageRight.style.cursor = "pointer";
+        person.style.cursor = "pointer";
+        
 }
 
 function fadeInScreen2 (clicked) {
     reset()
-        fadeIn_2.fromTo(background2, 1, {
-            opacity: 0
+    // animate title
+    TweenMax.set(myth2Title, {
+        transformOrigin: "center center"
+    })
+        fadeIn_2
+        .fromTo(myth2Title, 1, {
+            opacity: 0,
+            scale: 0,
+            x: 150
         },{
+            scale: 1.1,
             opacity: 1,
-            ease: "power2.out"
+            ease: "power1.inOut",
+            x: 150
         })
         .to(myth2Title, 1, {
-            opacity: 1
+            scale: 1,
+            ease: "power1.inOut",
+
         })
         .fromTo(myth2Title, 1,{
-            opacity: 0,
             y: 200,
-            x: 300, 
+            x: 150
         },{
-            opacity: 1,
             y:0,
             x:0,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
-        .fromTo(person2, 1, {
+        // slide in person
+        .fromTo(person2, .7, {
             opacity: 1,
             x: -300,
         },{
             x:0,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
+        // slide in doctor
         .fromTo(doctor, 1, {
-            display: 'block',
+            opacity: 1,
+            x: 700
+        },{
+            x: 0,
+            ease: "power1.inOut"
+        })
+        // fade in clipboard
+        .fromTo(clipboard, .5, {
             opacity: 0,
         },{
-            opacity:1,
-            ease: "power2.out"
+            opacity: 1,
+            ease: "power1.inOut"
         })
+        // fade in glows
         .fromTo([glowClipboard, glowJacket],1,{
-            display: 'block',
             opacity: 0
         },{
             opacity: 0.5
         })
-
+        // animate glows
         glowItems();
+        // wink
+        // winkwink.fromTo(wink, 1, {
+        //     y: -10
+        // },{
+        //     y: 0,
+        //     delay: 3.5
+        // })
+        // .to(wink, 1, {
+        //     y: -10
+        // })
+
+        // change cursor to pointer on clickable items
+        clipboard.style.cursor = "pointer";
+        jacket.style.cursor = "pointer";
 
 }
 
 function fadeInScreen3 (clicked) {
     reset()
-        fadeIn_3.fromTo(background3, 1, {
-            opacity: 0
+    // animate title
+    TweenMax.set(myth3Title, {
+        transformOrigin: "center center"
+    })
+        fadeIn_3
+        .fromTo(myth3Title, 1, {
+            opacity: 0,
+            scale: 0
         },{
+            scale: 1.1,
             opacity: 1,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
         .to(myth3Title, 1, {
-            opacity: 1
+            scale: 1,
+            ease: "power1.inOut"
         })
         .fromTo(myth3Title, 1,{
-            opacity: 0,
             y: 200,
             x: 300, 
         },{
-            opacity: 1,
             y:0,
             x:0,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
+        // slide in person
         .fromTo(person3, 1, {
             opacity: 1,
             x: -300,
         },{
             x:0,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
+        // slide in bed
         .fromTo(bed, 1, {
-            display: 'block',
-            opacity: 0,
+            opacity: 1,
+            x: 800
         },{
-            opacity:1,
-            ease: "power2.out"
+            x: 0,
+            ease: "power1.inOut"
         })
-        .fromTo([glowChart, glowMatress],1,{
+        // fade in glows
+        .fromTo([glowChart, glowMatress], .5,{
             display: 'block',
             opacity: 0
         },{
             opacity: 0.5
         })
-
+        // animate glows
         glowItems();
+
+        // change cursor to pointer on clickable items
+        matress.style.cursor = "pointer";
+        chart.style.cursor = "pointer";
 
 }
 
 function fadeInScreen4 (clicked) {
     reset()
-        fadeIn_4.fromTo(background4, 1, {
-            opacity: 0
+    // animate title
+    TweenMax.set(myth4Title, {
+        transformOrigin: "center center"
+    })
+        fadeIn_4
+        .fromTo(myth4Title, 1, {
+            opacity: 0,
+            scale: 0,
+            x: 150
         },{
+            scale: 1.1,
             opacity: 1,
-            ease: "power2.out"
+            ease: "power1.inOut",
+            x: 150
         })
         .to(myth4Title, 1, {
-            opacity: 1
+            scale: 1,
+            ease: "power1.inOut"
         })
         .fromTo(myth4Title, 1,{
-            opacity: 0,
             y: 200,
-            x: 300, 
+            x: 150, 
         },{
-            opacity: 1,
             y:0,
             x:0,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
-        .fromTo(person4, 1, {
+        // slide in person
+        .fromTo(person4, .7, {
             opacity: 1,
             x: -300,
         },{
             x:0,
-            ease: "power2.out"
+            ease: "power1.inOut"
         })
+        // slide in table
         .fromTo(table2, 1, {
-            display: 'block',
-            opacity: 0,
+            opacity: 1,
+            x: 700
         },{
-            opacity:1,
-            ease: "power2.out"
+            x: 0,
+            ease: "power1.inOut"
         })
+        // fade in beakers
         .fromTo(beakers, 1, {
-            display: 'block',
             opacity: 0,
         },{
-            opacity:1,
-            ease: "power2.out"
+            opacity: 1,
+            ease: "power1.inOut"
         })
+        // fade in glows
         .fromTo([glowNeedle, glowBottle, glowBottleEnd ],1,{
-            display: 'block',
             opacity: 0
         },{
             opacity: 0.5
         })
-
+        // animate glows
         glowItems();
 
+        // change cursor to pointer on clickable items
+        greenBeaker.style.cursor = "pointer";
+        purpleBeaker.style.cursor = "pointer";
+        needle.style.cursor = "pointer";
 }
 
 function fadeInScreen5 (clicked) {
     reset()
-        fadeIn_5.fromTo(nextSteps, 1, {
+    // animate title
+    TweenMax.set([nextSteps, info], {
+        transformOrigin: "center center"
+    })
+        fadeIn_5
+        .fromTo(nextSteps, 1.5, {
+            opacity: 0,
+            scale: 0
+        },{
+            scale: .6,
+            opacity: 1,
+            ease: "power1.inOut"
+        })
+        // .fromTo(nextSteps, 1, {
+        //     scale: 1
+        // },{
+        //     scale: 0.8,
+        //     ease: "power1.inOut",
+        //     repeat: 2,
+        //     yoyo: true
+        // })
+        // fade in info
+        .fromTo(info, 1.5, {
             opacity: 0
         },{
             opacity: 1,
-            ease: "power2.out"
-        })
-        .fromTo(nextSteps, .5, {
-            scale: 1
-        },{
-            scale: 1.02,
-            repeat: 3,
-            yoyo: true,
-            ease: "power2.out"
-        })
-        .fromTo(info, 2, {
-            opacity: 0
-        },{
-            opacity: 1,
-            ease: "power2.out"
+            ease: "power1.inOut",
+            scale: 0.7
+            // ,
+            // delay: .3
         })
 
+}
+
+// functions to take out items
+function fadeOutScreen1 (clicked) {
+        fadeOut_1
+        // fade out glows
+        .to([glowRight, glowLeft, glowPerson],.5,{
+            opacity: 0
+        })
+        // fade out cages
+        .to([cageLeft, cageRight], .5, {
+            opacity: 0,
+            ease: "power1.inOut"
+        })
+        // slide out table
+        .to(table, .7, {
+            x: 700,
+            ease: "power1.inOut"
+        })
+        .to(person, .5, {
+            x: -300,
+            ease: "power1.inOut"
+        })
+        // slide out title
+        .to(myth1Title, 1,{
+            y: -300,
+            ease: "power1.inOut"
+        })
+}
+
+function fadeOutScreen2 (clicked) {
+    fadeOut_2
+    // fade out glows
+    .to([glowJacket, glowClipboard],.5,{
+        opacity: 0
+    })
+    // slide out doctor
+    .to(doctor, 1, {
+        x: 400,
+        ease: "power1.inOut"
+    })
+    // slide out person
+    .to(person2, 1, {
+        x: -300,
+        ease: "power1.inOut"
+    })
+    // slide out title
+    .to(myth2Title, 1,{
+        y: -300,
+        ease: "power1.inOut"
+    })
+}
+
+function fadeOutScreen3 (clicked) {
+    fadeOut_3
+    // fade out glows
+    .to([glowMatress, glowChart], .5,{
+        opacity: 0
+    })
+    // slide out bed
+    .to(bed, 1, {
+        x: 800,
+        ease: "power1.inOut"
+    })
+    // slide out person
+    .to(person3, 1, {
+        x: -300,
+        ease: "power1.inOut"
+    })
+    // slide out title
+    .to(myth3Title, 1,{
+        y: -300,
+        ease: "power1.inOut"
+    })
+}
+
+function fadeOutScreen4 (clicked) {
+    fadeOut_4
+    // fade out glows
+    .to([glowNeedle, glowBottle, glowBottleEnd], .5,{
+        opacity: 0
+    })
+    // slide out beakers and table
+    .to([beakers, table2], 1, {
+        x: 700,
+        ease: "power1.inOut"
+    })
+    // slide out person
+    .to(person4, 1, {
+        x: -300,
+        ease: "power1.inOut"
+    })
+    // slide out title
+    .to(myth4Title, 1,{
+        y: -300,
+        ease: "power1.inOut"
+    })
+}
+
+function fadeOutScreen5 (clicked) {
+    // fade out title
+    fadeOut_5.to(info,.5,{
+        opacity: 0,
+        ease: "power1.inOut"
+    })
+    // fade out info
+    .to(nextSteps, .5, {
+        opacity: 0,
+        ease: "power1.inOut"
+    })
 }
 
 // code to make the clickable elements glow
@@ -319,138 +546,16 @@ function glowItems () {
         })
 }
 
-// functions to make items fade out
-function fadeOutScreen1 (clicked) {
-        // reset()
-        fadeOut_1.to([glowRight, glowLeft, glowPerson],1,{
-            opacity: 0
-        })
-        .to([table, cageLeft, cageRight], 1, {
-            opacity: 0,
-            ease: "power2.out"
-        })
-        .to(person, 1, {
-            x: -300,
-            ease: "power2.out"
-        })
-        .to(myth1Title, 1,{
-            opacity: 0,
-            ease: "power2.out"
-        })
-        .to(background, 1, {
-            opacity: 0
-        })
-}
+    // add/remove items on button click
+    // document.getElementById('fadein1').onclick = fadeInScreen1;
+    // document.getElementById('fadeout1').onclick = fadeOutScreen1;
+    // document.getElementById('fadein2').onclick = fadeInScreen2;
+    // document.getElementById('fadeout2').onclick = fadeOutScreen2;
+    // document.getElementById('fadein3').onclick = fadeInScreen3;
+    // document.getElementById('fadeout3').onclick = fadeOutScreen3;
+    // document.getElementById('fadein4').onclick = fadeInScreen4;
+    // document.getElementById('fadeout4').onclick = fadeOutScreen4;
+    // document.getElementById('fadein5').onclick = fadeInScreen5;
+    // document.getElementById('fadeout5').onclick = fadeOutScreen5;
 
-function fadeOutScreen2 (clicked) {
-    // reset()
-    fadeOut_2.to([glowJacket, glowClipboard],1,{
-        opacity: 0
-    })
-    .to(doctor, 1, {
-        opacity: 0,
-        ease: "power2.out"
-    })
-    .to(person2, 1, {
-        x: -300,
-        ease: "power2.out"
-    })
-    .to(myth2Title, 1,{
-        opacity: 0,
-        ease: "power2.out"
-    })
-    .to(background2, 1, {
-        opacity: 0
-    })
-}
-
-function fadeOutScreen3 (clicked) {
-    // reset()
-    fadeOut_3.to([glowMatress, glowChart],1,{
-        opacity: 0
-    })
-    .to(bed, 1, {
-        opacity: 0,
-        ease: "power2.out"
-    })
-    .to(person3, 1, {
-        x: -300,
-        ease: "power2.out"
-    })
-    .to(myth3Title, 1,{
-        opacity: 0,
-        ease: "power2.out"
-    })
-    .to(background3, 1, {
-        opacity: 0
-    })
-}
-
-function fadeOutScreen4 (clicked) {
-    // reset()
-    fadeOut_4.to([glowNeedle, glowBottle, glowBottleEnd],1,{
-        opacity: 0
-    })
-    .to(beakers, 1, {
-        opacity: 0,
-        ease: "power2.out"
-    })
-    .to(table2, 1, {
-        opacity: 0,
-        ease: "power2.out"
-    })
-    .to(person4, 1, {
-        x: -300,
-        ease: "power2.out"
-    })
-    .to(myth4Title, 1,{
-        opacity: 0,
-        ease: "power2.out"
-    })
-    .to(background4, 1, {
-        opacity: 0
-    })
-}
-
-function fadeOutScreen5 (clicked) {
-    // reset()
-    fadeOut_5.to(info,1,{
-        opacity: 0,
-        ease: "power2.out"
-    })
-    .to(nextSteps, 1, {
-        opacity: 0,
-        ease: "power2.out"
-    })
-}
-
-// function checkPageFocus() {
-//     let body = document.querySelector('body');
-// }
-    document.getElementById('fadein1').onclick = fadeInScreen1;
-    document.getElementById('fadeout1').onclick = fadeOutScreen1;
-    document.getElementById('fadein2').onclick = fadeInScreen2;
-    document.getElementById('fadeout2').onclick = fadeOutScreen2;
-    document.getElementById('fadein3').onclick = fadeInScreen3;
-    document.getElementById('fadeout3').onclick = fadeOutScreen3;
-    document.getElementById('fadein4').onclick = fadeInScreen4;
-    document.getElementById('fadeout4').onclick = fadeOutScreen4;
-    document.getElementById('fadein5').onclick = fadeInScreen5;
-    document.getElementById('fadeout5').onclick = fadeOutScreen5;
-
-    let firstPage = document.getElementById('firstPage');
-
-    if(firstPage.hasFocus()){
-        fadeInScreen1();
-    } else{
-        fadeOutScreen1();
-    }
-
-    // window.addEventListener("click", function(e) {
-    //     let screen = document.querySelectorAll('.screen');
-    //     // fadeInScreen1 ();
-    //     console.log(screen);
-    //     console.log(screen[1]);
-    // });
-    
 }
