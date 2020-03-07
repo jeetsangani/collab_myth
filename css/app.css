@@ -14,7 +14,7 @@
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
     .responsive {
         width: 400px;
         height: 400px;
@@ -47,4 +47,7 @@ body {
     --cd-color-3-l: 97%;
     --font-primary: 'Fira Sans', sans-serif;
     --font-secondary: 'Playfair Display', serif;
+}
+.cd-h-timeline__line{
+    position: absolute;
 }
