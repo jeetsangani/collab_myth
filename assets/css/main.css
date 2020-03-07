@@ -31,7 +31,6 @@ opacity: 1;
 }
 
 #tutorial_container {
-width: 750px;
 height: 400px;
 margin: auto;
 background-color: #fff;
@@ -122,8 +121,6 @@ overflow: hidden;
 }
 #right-side #first, #right-side #second, #right-side #third, #right-side #fourth {
 position: absolute;
-height: 300px;
-width: 75%;
 transition: all .6s ease-in-out;
 margin-top: -350px;
 opacity: 0;
