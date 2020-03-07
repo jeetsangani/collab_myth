@@ -3915,15 +3915,15 @@ body {
 
 
     -webkit-animation-name: cd-enter-right;
-    animation: cd-enter-right 3s;
-    /* animation-duration: 3s; */
+    animation-name: cd-enter-right 3s;
+    animation-duration: 3s;
 }
 
 .js .cd-h-timeline__event--enter-left,
 .js .cd-h-timeline__event--leave-left {
     -webkit-animation-name: cd-enter-left;
-    animation: cd-enter-left 3s;
-    /* animation-duration: 3s; */
+    animation-name: cd-enter-left 3s;
+    animation-duration: 3s;
 }
 
 .js .cd-h-timeline__event--leave-right,

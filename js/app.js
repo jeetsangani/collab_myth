@@ -1,4 +1,13 @@
-window.onload = function(){
+window.onload = function checkPageFocus (){
+
+    // Targeting div for checking focus
+    let firstFocus = document.querySelector('#firstFocus')
+
+    //
+    if (firstFocus.hasFocus){
+        fadeInScreen1();
+    }
+
     // targeting the svg objects in the html
     let first = document.getElementById('firstPage').contentDocument;
     let second = document.getElementById('secondPage').contentDocument;
