@@ -15,8 +15,15 @@
 }
 
 .responsive {
+    max-width: auto;
+    max-height: 80%;
+}
+
+li {
     width: 100%;
-    height: auto;
+    height: 100%;
+    min-width: 2%;
+    min-height: 2%;
 }
 
 :root {
