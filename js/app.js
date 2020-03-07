@@ -1,4 +1,4 @@
-window.onload = function(){
+window.onload = function checkPageFocus(){
     // targeting the svg objects in the html
     let first = document.getElementById('first').contentDocument;
     let second = document.getElementById('second').contentDocument;
@@ -424,9 +424,9 @@ function fadeOutScreen5 (clicked) {
     })
 }
 
-function checkPageFocus() {
-    
-}
+// function checkPageFocus() {
+//     let body = document.querySelector('body');
+// }
     document.getElementById('fadein1').onclick = fadeInScreen1;
     document.getElementById('fadeout1').onclick = fadeOutScreen1;
     document.getElementById('fadein2').onclick = fadeInScreen2;
@@ -438,6 +438,13 @@ function checkPageFocus() {
     document.getElementById('fadein5').onclick = fadeInScreen5;
     document.getElementById('fadeout5').onclick = fadeOutScreen5;
 
+    let firstPage = document.getElementById('firstPage');
+
+    if(firstPage.hasFocus()){
+        fadeInScreen1();
+    } else{
+        fadeOutScreen1();
+    }
 
     // window.addEventListener("click", function(e) {
     //     let screen = document.querySelectorAll('.screen');
