@@ -86,10 +86,3 @@ $("#second").removeClass("active");
 $("#third").removeClass("active");
 $("#fourth").addClass("active");
 })
-
-// logo animations
-// TweenMax.To('#pointer_right', 2, {
-//     top: 20,
-//     left: 38,
-//     repeat: -1
-// });
