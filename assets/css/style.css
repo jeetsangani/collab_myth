@@ -3913,16 +3913,17 @@ body {
 .js .cd-h-timeline__event--enter-right,
 .js .cd-h-timeline__event--leave-right {
 
+    
     -webkit-animation-name: cd-enter-right;
     animation-name: cd-enter-right;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 
 .js .cd-h-timeline__event--enter-left,
 .js .cd-h-timeline__event--leave-left {
     -webkit-animation-name: cd-enter-left;
     animation-name: cd-enter-left;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 
 .js .cd-h-timeline__event--leave-right,
@@ -3957,12 +3958,14 @@ body {
 
 @-webkit-keyframes cd-enter-right {
     0% {
+        animation-delay: 1s;
         opacity: 0;
         -webkit-transform: translateX(100%);
         transform: translateX(100%)
     }
 
     100% {
+        animation-delay: 1s;
         opacity: 1;
         -webkit-transform: translateX(0%);
         transform: translateX(0%)
@@ -3971,12 +3974,14 @@ body {
 
 @keyframes cd-enter-right {
     0% {
+        animation-delay: 1s;
         opacity: 0;
         -webkit-transform: translateX(100%);
         transform: translateX(100%)
     }
 
     100% {
+        animation-delay: 1s;
         opacity: 1;
         -webkit-transform: translateX(0%);
         transform: translateX(0%)
@@ -3985,12 +3990,14 @@ body {
 
 @-webkit-keyframes cd-enter-left {
     0% {
+        animation-delay: 1s;
         opacity: 0;
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%)
     }
 
     100% {
+        animation-delay: 1s;
         opacity: 1;
         -webkit-transform: translateX(0%);
         transform: translateX(0%)
@@ -3999,12 +4006,14 @@ body {
 
 @keyframes cd-enter-left {
     0% {
+        animation-delay: 1s;
         opacity: 0;
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%)
     }
 
     100% {
+        animation-delay: 1s;
         opacity: 1;
         -webkit-transform: translateX(0%);
         transform: translateX(0%)
