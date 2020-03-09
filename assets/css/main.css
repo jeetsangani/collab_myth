@@ -116,8 +116,6 @@ transition: all .4s ease-in-out;
 
 #right-side {
 height: 300px;
-width: 75%;
-overflow: hidden;
 }
 #right-side #first, #right-side #second, #right-side #third, #right-side #fourth {
 position: absolute;
