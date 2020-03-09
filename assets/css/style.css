@@ -213,8 +213,6 @@ svg {
 }
 
 .container {
-    width: calc(100% - 1.25em);
-    width: calc(100% - 2*var(--component-padding));
     margin-left: auto;
     margin-right: auto
 }
