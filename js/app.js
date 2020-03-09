@@ -74,11 +74,11 @@ window.onload = function () {
 
 
     // code to make first slide fade in
-    // function reset(){
-    //     TweenMax.set([myth1Title,myth2Title,table, cageLeft,person, cageRight,glowRight, glowLeft, glowPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, beakers, nextSteps, info],{
-    //         clearProps: "all"
-    //     })
-    //     }
+    function reset(){
+        TweenMax.set([myth1Title,myth2Title,table, cageLeft,person, cageRight,glowRight, glowLeft, glowPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, beakers, nextSteps, info],{
+            clearProps: "all"
+        })
+        }
 
     // functions to make items fade in or appear
     function fadeInScreen1(clicked) {
@@ -548,7 +548,7 @@ window.onload = function () {
     }
 
     // add/remove items on button click
-    document.getElementById('fadein1').onclick = fadeInScreen1;
+    document.getElementById('fadeinOne').onclick = fadeInScreen1;
     // document.getElementById('fadeout1').onclick = fadeOutScreen1;
     document.getElementById('fadein2').onclick = fadeInScreen2;
     // document.getElementById('fadeout2').onclick = fadeOutScreen2;

@@ -45,3 +45,13 @@ ol {
 .image-container{
     width: 61vw;
 }
+
+h2 {
+    font-family: fredericka-the-greatest, serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 200px;
+    max-width: 60vw;
+    color: DimGray;
+    z-index: 1;
+}
