@@ -43,10 +43,7 @@
 
 ol {
     margin-left: 0;
-}
-
-.image-container {
-    width: 61vw;
+    margin-bottom: 3vw;
 }
 
 h2 {
@@ -107,4 +104,24 @@ h2 {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.position {
+    position: absolute;
+    bottom: 10%;
+}
+
+@media all and (max-width: 1800px) and (min-width: 1000px) {
+    .margin-top {
+        margin-top: 4vw;
+    }
+}
+
+#mainContainer{
+    height: 100%;
+}
+
+.screen{
+    width: 100vw;
+    height: auto;
 }

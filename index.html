@@ -54,19 +54,18 @@
     <img class="large-12 small-12 grid-x" src="assets/icons/giphy.gif">
 
   </div>
-
-  <section id="wrapper" class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+  <div id="wrapper">
     <header id="branding" class="top-bar">
       <a href="index.html"><img class="header-responsive" src="assets/img/lakeridge-logo.png"></a>
     </header>
 
-    <div class="cd-h-timeline__events grid-container height">
-      <ol>
+    <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md" id="mainContainer">
+      <div class="cd-h-timeline__events grid-container height margin-top">
 
         <!-- First Page -->
         <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component large-12 medium-12 cell">
           <div class="cd-h-timeline__event-content container image-container">
-            <object class="screen responsive" id="firstPage" data="assets/svg/first.svg" type="image/svg+xml"></object>
+            <object class="screen" id="firstPage" data="assets/svg/first.svg" type="image/svg+xml"></object>
           </div>
         </li>
 
@@ -217,7 +216,7 @@
               </div>
             </div>
             <!-- modal container 2 -->
-            <div id="myModal2" class="modal">
+            <div id="myModal5" class="modal">
               <!-- Modal content -->
               <div class="modal-content">
                 <span class="close4 close" id="close1">&times;</span>
@@ -235,6 +234,31 @@
           <div class="cd-h-timeline__event-content container image-container">
             <object class="screen responsive" id="fourthPage" data="assets/svg/fourth.svg" type="image/svg+xml"
               aria-label="Myth#3 - I won't receive the same level of care that I currently have"></object>
+
+
+            <!-- modal container 1 -->
+            <div id="myModal6" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close close5">&times;</span>
+                <p>Participants in clinical trials receive a high standard of care. All participants havethe opportunity
+                  to talk with study staff, and should also continue care with theirdoctor </p>
+              </div>
+            </div>
+            <!-- modal container 2 -->
+            <div id="myModal7" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close6 close" id="close1">&times;</span>
+                <p>For people living with the disease, research shows that those involved in clinicalstudies do somewhat
+                  better than people in a similar stage of their disease whoare not enrolled, regardless of whether the
+                  experimental treatment works. Thismay result from the general high quality of care provided during
+                  clinical studies</p>
+              </div>
+            </div>
+            <!-- modal container end -->
+
+
           </div>
         </li>
 
@@ -256,36 +280,38 @@
               aria-label="Next Steps - If you are interested in learning more ask your oncologist about the research that happens here"></object>
           </div>
         </li>
-      </ol>
-    </div> <!-- .cd-h-timeline__events -->
+        </ol>
+      </div> <!-- .cd-h-timeline__events -->
 
-    <div class="cd-h-timeline__container container image-container">
-      <div class="cd-h-timeline__dates">
-        <div class="cd-h-timeline__line">
-          <ol>
-            <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">Intro</a>
-            </li>
-            <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">Tutorial</a></li>
-            <li><a href="#0" id="fadeinOne" data-date="20/04/2014" class="cd-h-timeline__date">Myth 1</a></li>
-            <li><a href="#0" id="fadein2" data-date="20/05/2014" class="cd-h-timeline__date">Myth 2</a></li>
-            <li><a href="#0" id="fadein3" data-date="09/07/2014" class="cd-h-timeline__date">Myth 3</a></li>
-            <li><a href="#0" id="fadein4" data-date="30/08/2014" class="cd-h-timeline__date">Myth 4</a></li>
-            <li><a href="#0" id="fadein5" data-date="15/09/2014" class="cd-h-timeline__date">What Next</a></li>
-          </ol>
+      <div class="cd-h-timeline__container container image-container position">
+        <div class="cd-h-timeline__dates">
+          <div class="cd-h-timeline__line">
+            <ol>
+                <!-- <li><a href="#0" data-date="16/01/2014"
+                    class="cd-h-timeline__date cd-h-timeline__date--selected">Intro</a>
+                </li>
+                <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">Tutorial</a></li>
+                <li><a href="#0" id="fadeinOne" data-date="20/04/2014" class="cd-h-timeline__date">Myth 1</a></li>
+                <li><a href="#0" id="fadein2" data-date="20/05/2014" class="cd-h-timeline__date">Myth 2</a></li>
+                <li><a href="#0" id="fadein3" data-date="09/07/2014" class="cd-h-timeline__date">Myth 3</a></li>
+                <li><a href="#0" id="fadein4" data-date="30/08/2014" class="cd-h-timeline__date">Myth 4</a></li>
+                <li><a href="#0" id="fadein5" data-date="15/09/2014" class="cd-h-timeline__date">What Next</a></li> -->
+            </ol>
 
-          <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
-        </div> <!-- .cd-h-timeline__line -->
-      </div> <!-- .cd-h-timeline__dates -->
+            <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+          </div> <!-- .cd-h-timeline__line -->
+        </div> <!-- .cd-h-timeline__dates -->
 
-      <ul>
-        <a href="#0"
-          class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive"></a>
+        <!-- <ul>
+          <a href="#0"
+            class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive"></a>
 
-        <a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next"></a>
-      </ul>
-    </div> <!-- .cd-h-timeline__container -->
+          <a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next"></a>
+        </ul> -->
+      </div> <!-- .cd-h-timeline__container -->
 
-  </section>
+    </section>
+  </div>
   <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
   <script src="assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>

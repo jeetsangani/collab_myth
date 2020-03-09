@@ -27,6 +27,7 @@ window.onload = function () {
     let glowJacket = third.getElementById('glowJacket');
     let myth2Title = third.getElementById('title');
     let doctor = third.getElementById('doctor');
+    let secondPerson = third.getElementById('glowPerson');
     let person2 = third.getElementById('person');
     let clipboard = third.getElementById('clipboard');
     // let wink = third.getElementById('wink');
@@ -76,7 +77,7 @@ window.onload = function () {
 
     // code to make first slide fade in
     function reset() {
-        TweenMax.set([myth1Title, myth2Title, table, cageLeft, person, cageRight, glowRight, glowLeft, glowPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, beakers, nextSteps, info], {
+        TweenMax.set([myth1Title, myth2Title, table, cageLeft, person, cageRight, glowRight, glowLeft, glowPerson, secondPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, beakers, nextSteps, info], {
             clearProps: "all"
         })
     }
@@ -134,7 +135,7 @@ window.onload = function () {
                 ease: "power1.inOut"
             }, .5)
             // add in glows
-            .fromTo([glowRight, glowLeft, glowPerson], .5, {
+            .fromTo([glowRight, glowLeft, glowPerson, secondPerson], .5, {
                 opacity: 0
             }, {
                 opacity: 0.25
@@ -198,7 +199,7 @@ window.onload = function () {
                 ease: "power1.inOut"
             })
             // slide in person
-            .fromTo(person2, .7, {
+            .fromTo([person2, secondPerson], .7, {
                 opacity: 1,
                 x: -300,
             }, {
@@ -411,7 +412,7 @@ window.onload = function () {
     function fadeOutScreen1(clicked) {
         fadeOut_1
             // fade out glows
-            .to([glowRight, glowLeft, glowPerson], .5, {
+            .to([glowRight, glowLeft, glowPerson, secondPerson], .5, {
                 opacity: 0
             })
             // fade out cages
@@ -447,7 +448,7 @@ window.onload = function () {
                 ease: "power1.inOut"
             })
             // slide out person
-            .to(person2, 1, {
+            .to([person2, secondPerson], 1, {
                 x: -300,
                 ease: "power1.inOut"
             })
@@ -519,10 +520,10 @@ window.onload = function () {
 
     // code to make the clickable elements glow
     function glowItems() {
-        TweenMax.set([glowRight, glowLeft, glowPerson, glowClipboard, glowJacket, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, nextSteps], {
+        TweenMax.set([glowRight, glowLeft, glowPerson, secondPerson, glowClipboard, glowJacket, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, nextSteps], {
             transformOrigin: "center center"
         });
-        TweenMax.to([glowRight, glowLeft, glowPerson, glowClipboard, glowChart, glowNeedle, glowBottle, glowBottleEnd], 1, {
+        TweenMax.to([glowRight, glowLeft, glowPerson, secondPerson, glowClipboard, glowChart, glowNeedle, glowBottle, glowBottleEnd], 1, {
             scaleY: 1.2,
             scaleX: 1.2,
             yoyo: true,
@@ -534,7 +535,7 @@ window.onload = function () {
             yoyo: true,
             repeat: -1
         })
-        TweenMax.to(glowPerson, 1, {
+        TweenMax.to([glowPerson, secondPerson], 1, {
             scaleY: 1.1,
             scaleX: 1.2,
             yoyo: true,
@@ -571,6 +572,9 @@ window.onload = function () {
     let modal2 = document.getElementById("myModal2");
     let modal3 = document.getElementById("myModal3");
     let modal4 = document.getElementById("myModal4");
+    let modal5 = document.getElementById("myModal4");
+    let modal6 = document.getElementById("myModal4");
+    let modal7 = document.getElementById("myModal4");
 
 
     //Triggering audio files
