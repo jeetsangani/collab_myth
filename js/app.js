@@ -569,35 +569,59 @@ window.onload = function () {
     // Get the modal
     let modal1 = document.getElementById("myModal1");
     let modal2 = document.getElementById("myModal2");
-    let modal3 = document.getElementById("myModal3");    
+    let modal3 = document.getElementById("myModal3");
+    let modal4 = document.getElementById("myModal4");
+
+
+    //Triggering audio files
+    let audio1 = document.getElementById('myth101');
+    let audio2 = document.getElementById('myth102');
+    let audio3 = document.getElementById('myth103');
+    let audio4 = document.getElementById('myth201');
 
     // Get the <span> element that closes the modal
     let close = document.getElementsByClassName("close")[0];
     let close1 = document.getElementsByClassName("close1")[0];
     let close2 = document.getElementsByClassName("close2")[0];
+    let close3 = document.getElementsByClassName("close3")[0];
 
     // When the user clicks the button, open the modal 
     mainPerson.onclick = function () {
         modal1.style.display = "block";
+        audio3.play();
+
     }
     cageLeft.onclick = function () {
         modal2.style.display = "block";
+        audio1.play();
     }
     cageRight.onclick = function () {
         modal3.style.display = "block";
+        audio2.play();
+    }
+    doctor.onclick = function () {
+        modal4.style.display = "block";
+        audio4.play();
     }
 
     // When the user clicks on <span> (x), close the modal
     close.onclick = function () {
         modal1.style.display = "none";
+        audio3.pause();
     }
     close1.onclick = function () {
         modal2.style.display = "none";
+        audio1.pause();
     }
     close2.onclick = function () {
         modal3.style.display = "none";
+        audio2.pause();
     }
-    
+    close3.onclick = function () {
+        modal4.style.display = "none";
+        audio4.pause();
+    }
+
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
@@ -605,10 +629,13 @@ window.onload = function () {
             modal1.style.display = "none";
         }
         if (event.target == modal2) {
-            modal1.style.display = "none";
+            modal2.style.display = "none";
         }
         if (event.target == modal3) {
-            modal1.style.display = "none";
+            modal3.style.display = "none";
+        }
+        if (event.target == modal3) {
+            modal4.style.display = "none";
         }
     }
 
