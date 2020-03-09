@@ -1,8 +1,11 @@
+.responsive {
+    width: 60vw;
+    min-height: 20vw;
+}
 
-/* .responsive{
-    width: 600px; 
-    /* height: 60vw;
-} */
+.header-responsive {
+    height: 3vw;
+}
 
 
 ul,
