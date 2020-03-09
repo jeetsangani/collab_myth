@@ -563,32 +563,52 @@ window.onload = function () {
 
 
     /*********************** modal ************************/
-    
+
 
     /*********************** page 1 ************************/
     // Get the modal
-    let modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    
+    let modal1 = document.getElementById("myModal1");
+    let modal2 = document.getElementById("myModal2");
+    let modal3 = document.getElementById("myModal3");    
 
     // Get the <span> element that closes the modal
-    let span = document.getElementsByClassName("close")[0];
+    let close = document.getElementsByClassName("close")[0];
+    let close1 = document.getElementsByClassName("close1")[0];
+    let close2 = document.getElementsByClassName("close2")[0];
 
     // When the user clicks the button, open the modal 
     mainPerson.onclick = function () {
-        modal.style.display = "block";
+        modal1.style.display = "block";
+    }
+    cageLeft.onclick = function () {
+        modal2.style.display = "block";
+    }
+    cageRight.onclick = function () {
+        modal3.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
+    close.onclick = function () {
+        modal1.style.display = "none";
     }
+    close1.onclick = function () {
+        modal2.style.display = "none";
+    }
+    close2.onclick = function () {
+        modal3.style.display = "none";
+    }
+    
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target == modal1) {
+            modal1.style.display = "none";
+        }
+        if (event.target == modal2) {
+            modal1.style.display = "none";
+        }
+        if (event.target == modal3) {
+            modal1.style.display = "none";
         }
     }
 
