@@ -562,7 +562,7 @@ window.onload = function () {
     // function checkPageFocus() {
 
     //     // Targeting div for checking focus
-    //     let firstFocus = document.querySelector('#firstFocus')
+    //     let firstFocus = document.querySelector('#firstFocus') 
     //     let check = document.activeElement.classList;
         
     //     if (check) {
