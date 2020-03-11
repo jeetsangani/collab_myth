@@ -120,11 +120,11 @@ h2 {
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #E1F1F9;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    border: 2px solid #25AAE1;
+    width: 60%;
 }
 
 /* The Close Button */
