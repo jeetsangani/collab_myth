@@ -3733,7 +3733,7 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: hsl(74, 93%, 32%);
+    background-color: rgb(12, 12, 160);
     background-color: var(--cd-color-2);
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
@@ -3784,9 +3784,9 @@ body {
 }
 
 .js .cd-h-timeline__date:hover::after {
-    background-color: hsl(74, 93%, 32%);
+    background-color: rgb(12, 12, 160);
     background-color: var(--cd-color-2);
-    border-color: hsl(74, 93%, 32%);
+    border-color: rgb(12, 12, 160);
     border-color: var(--cd-color-2)
 }
 
@@ -3801,14 +3801,14 @@ body {
 }
 
 .js .cd-h-timeline__date--selected::after {
-    background-color: hsl(74, 93%, 32%);
+    background-color: rgb(12, 12, 160);
     background-color: var(--cd-color-2);
-    border-color: hsl(74, 93%, 32%);
+    border-color: rgb(12, 12, 160);
     border-color: var(--cd-color-2)
 }
 
 .js .cd-h-timeline__date--older-event::after {
-    border-color: hsl(74, 93%, 32%);
+    border-color: rgb(12, 12, 160);
     border-color: var(--cd-color-2)
 }
 
@@ -3843,7 +3843,7 @@ body {
 }
 
 .js .cd-h-timeline__navigation:hover {
-    border-color: hsl(74, 93%, 32%);
+    border-color: rgb(12, 12, 160);
     border-color: var(--cd-color-2)
 }
 
