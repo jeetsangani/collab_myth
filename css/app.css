@@ -1,7 +1,11 @@
 html,
 body {
-    width: 100%;
-    height: auto;
+    min-height: 100%;
+}
+
+html,
+body {
+    max-height: 100%;
 }
 
 object {
@@ -127,11 +131,11 @@ h2 {
     }
 }
 
-#mainContainer {
+/* #mainContainer {
     height: 100%;
-}
+} */
 
 .screen {
-    width: 100vw;
-    height: auto;
+    max-width: 100vw;
+    max-height: 100vw;
 }
