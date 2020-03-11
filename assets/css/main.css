@@ -21,8 +21,8 @@ body {
 }
 
 /* main container */
+/* have you use in media query Too / to set height and width */
 .main-container {
-    width: 100vw !important;
     height: 70vh !important;
     background-color: rgba(255, 255, 255, 0.801);
 }
