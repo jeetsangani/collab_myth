@@ -33,6 +33,13 @@ li{
 
 }
 
+.container{
+    position: -webkit-sticky;
+}
+.timeline-container{
+    position: -webkit-sticky;
+}
+
 
 :root {
     --cd-color-1:
