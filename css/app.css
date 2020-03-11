@@ -9,7 +9,12 @@ body {
 }
 
 object {
-    max-width: 80vw;
+    max-width: 100vw;
+    height: auto;
+}
+li{
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -125,14 +130,10 @@ h2 {
     bottom: 10%;
 }
 
-@media all and (max-width: 1800px) and (min-width: 1000px) {
+/* @media all and (max-width: 1800px) and (min-width: 1000px) {
     .margin-top {
         margin-top: 4vw;
     }
-}
-
-/* #mainContainer {
-    height: 100%;
 } */
 
 .screen {
