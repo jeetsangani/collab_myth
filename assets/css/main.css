@@ -51,7 +51,7 @@ li {
 }
 
 
-:root {
+/* :root {
     --cd-color-1:
         hsl(0, 0%, 22%);
     --cd-color-1-h: 0;
@@ -67,7 +67,7 @@ li {
     --cd-color-3-l: 97%;
     --font-primary: 'Fira Sans', sans-serif;
     --font-secondary: 'Playfair Display', serif;
-}
+} */
 
 .cd-h-timeline__line {
     position: fixed;
