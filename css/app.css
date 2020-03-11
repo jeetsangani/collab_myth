@@ -8,6 +8,12 @@ body {
     max-height: 100%;
 }
 
+/* main container */
+.main-container{
+    width: 70vw !important;
+    height: 70vh !important;
+}
+
 object {
     max-width: 100vw;
     height: auto;
@@ -37,7 +43,7 @@ li{
     position: -webkit-sticky;
 }
 .timeline-container{
-    position: -webkit-sticky;
+    
 }
 
 
@@ -143,7 +149,7 @@ h2 {
     }
 } */
 
-.screen {
+/* .screen {
     max-width: 100vw;
-    max-height: 100vw;
-}
+    max-height: 62vh;
+} */
