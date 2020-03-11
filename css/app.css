@@ -8,17 +8,31 @@ body {
     max-height: 100%;
 }
 
+body {
+    background-image: url(../26564111.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* svg container */
+.svg-container{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 /* main container */
-.main-container{
-    width: 70vw !important;
+.main-container {
+    width: 100vw !important;
     height: 70vh !important;
+    background-color: rgba(255, 255, 255, 0.801);
 }
 
 object {
     max-width: 100vw;
     height: auto;
 }
-li{
+
+li {
     margin: 0px;
     padding: 0px;
 }
@@ -39,12 +53,7 @@ li{
 
 }
 
-.container{
-    position: -webkit-sticky;
-}
-.timeline-container{
-    
-}
+.timeline-container {}
 
 
 :root {

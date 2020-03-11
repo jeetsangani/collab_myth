@@ -3872,7 +3872,7 @@ body {
 
 .js .cd-h-timeline__events {
     position: relative;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     transition: height .4s
 }
@@ -3880,7 +3880,7 @@ body {
 .js .cd-h-timeline__event {
     position: absolute;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
     left: 0;
     top: 0;
     -webkit-transform: translateX(-100%);
