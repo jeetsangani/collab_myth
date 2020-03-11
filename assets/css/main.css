@@ -24,7 +24,10 @@ body {
 /* have you use in media query Too / to set height and width */
 .main-container {
     height: 70vh !important;
-    background-color: rgba(255, 255, 255, 0.801);
+    background-color: rgba(255, 255, 255, 0.925);
+}
+.timeline {
+    background-color: rgba(255, 255, 255, 0.849);
 }
 
 object {
@@ -48,21 +51,13 @@ li {
 }
 
 
-.js .cd-h-timeline__navigation {
-    border-style: none;
-
-}
-
-.timeline-container {}
-
-
 :root {
     --cd-color-1:
         hsl(0, 0%, 22%);
     --cd-color-1-h: 0;
     --cd-color-1-s: 0%;
     --cd-color-1-l: 22%;
-    --cd-color-2: grey;
+    --cd-color-2: rgb(12, 12, 160);
     --cd-color-2-h: 74;
     --cd-color-2-s: 93%;
     --cd-color-2-l: 32%;
