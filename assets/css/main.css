@@ -59,29 +59,14 @@ li {
 }
 
 
+.js .cd-h-timeline__container {
+    max-width: 100vw;
+}
 
 .js .cd-h-timeline__line {
     background-color: rgba(12, 12, 160, 0.377);
     /* background-color: hsl(var(--cd-color-3-h), var(--cd-color-3-s), calc(var(--cd-color-3-l))); */
 }
-
-/* :root {
-    --cd-color-1:
-        hsl(0, 0%, 22%);
-    --cd-color-1-h: 0;
-    --cd-color-1-s: 0%;
-    --cd-color-1-l: 22%;
-    --cd-color-2: rgb(12, 12, 160);
-    --cd-color-2-h: 74;
-    --cd-color-2-s: 93%;
-    --cd-color-2-l: 32%;
-    --cd-color-3: none;
-    --cd-color-3-h: 0;
-    --cd-color-3-s: 0%;
-    --cd-color-3-l: 97%;
-    --font-primary: 'Fira Sans', sans-serif;
-    --font-secondary: 'Playfair Display', serif;
-} */
 
 .cd-h-timeline__line {
     position: fixed;

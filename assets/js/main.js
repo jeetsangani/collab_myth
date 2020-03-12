@@ -31,7 +31,7 @@
         for (var i = 0; i < timeline.dateValues.length; i++) {
             var j = (i == 0) ? 0 : i ;
             var distance = daydiff(timeline.dateValues[j], timeline.dateValues[i]),
-                distanceNorm = (Math.round(distance / timeline.minLapse) + 1.55) * timeline.eventsMinDistance;
+                distanceNorm = (Math.round(distance / timeline.minLapse) + 1.85) * timeline.eventsMinDistance;
 
             if (distanceNorm < timeline.eventsMinDistance) {
                 distanceNorm = timeline.eventsMinDistance;
