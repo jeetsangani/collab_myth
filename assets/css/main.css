@@ -410,6 +410,19 @@ li {
     left: 100px;
 }
 
+/* for ipad (landscape view) */
+@media (max-width: 1024px) {
+    .modal-content {
+        max-width: 61%;
+        /* margin-left: 25vw; */
+        margin: auto;
+    }
+
+    .modal-textbox {
+        padding-right: 3vw;
+    }
+}
+
 /* for phone with buttons */
 @media (max-width:800px) {
     object {
@@ -436,6 +449,18 @@ li {
         z-index: 1000;
     }
 
+    .modal-content {
+        max-width: 75%;
+        margin-left: 13vw;
+        /* margin-top: -17vh; */
+        font-size: 0.9rem;
+        margin: -17vh auto;
+    }
+
+    .modal-textbox {
+        padding-right: 5vw;
+    }
+
 }
 /* for iphone x and sumsung models with full screen no buttons */
 @media (min-width:800px) and (max-width:900px) {
@@ -450,5 +475,17 @@ li {
     }
     .container{
         margin-bottom: 0px;
+    }
+
+    .modal-content {
+        max-width: 75%;
+        margin-left: 13vw;
+        /* margin-top: -17vh; */
+        font-size: 0.9rem;
+        margin: -17vh auto;
+    }
+
+    .modal-textbox {
+        padding-right: 5vw;
     }
 }
