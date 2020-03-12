@@ -575,6 +575,9 @@ window.onload = function () {
     let modal5 = document.getElementById("myModal5");
     let modal6 = document.getElementById("myModal6");
     let modal7 = document.getElementById("myModal7");
+    let modal8 = document.getElementById("myModal8");
+    let modal9 = document.getElementById("myModal9");
+    let modal10 = document.getElementById("myModal10");
 
 
     // Get the <span> element that closes the modal
@@ -585,6 +588,9 @@ window.onload = function () {
     let close4 = document.getElementsByClassName("close4")[0];
     let close5 = document.getElementsByClassName("close5")[0];
     let close6 = document.getElementsByClassName("close6")[0];
+    let close7 = document.getElementsByClassName("close6")[0];
+    let close8 = document.getElementsByClassName("close6")[0];
+    let close9 = document.getElementsByClassName("close6")[0];
 
 
     //Triggering audio files
@@ -595,6 +601,9 @@ window.onload = function () {
     let audio5 = document.getElementById('myth202');
     let audio6 = document.getElementById('myth301');
     let audio7 = document.getElementById('myth302');
+    let audio8 = document.getElementById('myth401');
+    let audio9 = document.getElementById('myth402');
+    let audio10 = document.getElementById('myth403');
 
     // When the user clicks the button, open the modal 
     mainPerson.onclick = function () {
