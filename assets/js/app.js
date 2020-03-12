@@ -1,4 +1,4 @@
-window.onload = function () {
+// window.onload = function () {
 
     // targeting the svg objects in the html
     let first = document.getElementById('firstPage').contentDocument;
@@ -26,7 +26,7 @@ window.onload = function () {
     let glowClipboard = third.getElementById('glowClipboard');
     let glowJacket = third.getElementById('glowJacket');
     let myth2Title = third.getElementById('title');
-    let doctor = third.getElementById('jacket');
+    let doctor = third.getElementById('doctor');
     let secondPerson = third.getElementById('glowPerson');
     let person2 = third.getElementById('person');
     let clipboard = third.getElementById('clipboard');
@@ -76,11 +76,11 @@ window.onload = function () {
 
 
     // code to make first slide fade in
-    function reset() {
-        TweenMax.set([myth1Title, myth2Title, table, cageLeft, person, cageRight, glowRight, glowLeft, glowPerson, secondPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, beakers, nextSteps, info], {
-            clearProps: "all"
-        })
-    }
+    // function reset() {
+    //     TweenMax.set([myth1Title, myth2Title, table, cageLeft, person, cageRight, glowRight, glowLeft, glowPerson, secondPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, beakers, nextSteps, info], {
+    //         clearProps: "all"
+    //     })
+    // }
 
     // functions to make items fade in or appear
     function fadeInScreen1(clicked) {
@@ -94,6 +94,7 @@ window.onload = function () {
                 opacity: 0,
                 scale: 0
             }, {
+                delay: 2.5,
                 scale: 1.1,
                 opacity: 1,
                 ease: "power1.inOut"
@@ -135,7 +136,7 @@ window.onload = function () {
                 ease: "power1.inOut"
             }, .5)
             // add in glows
-            .fromTo([glowRight, glowLeft, glowPerson, secondPerson], .5, {
+            .fromTo([glowRight, glowLeft, glowPerson], .5, {
                 opacity: 0
             }, {
                 opacity: 0.25
@@ -180,6 +181,7 @@ window.onload = function () {
                 scale: 0,
                 x: 150
             }, {
+                delay: 2.5,
                 scale: 1.1,
                 opacity: 1,
                 ease: "power1.inOut",
@@ -199,7 +201,7 @@ window.onload = function () {
                 ease: "power1.inOut"
             })
             // slide in person
-            .fromTo([person2, secondPerson], .7, {
+            .fromTo(person2, .7, {
                 opacity: 1,
                 x: -300,
             }, {
@@ -209,7 +211,7 @@ window.onload = function () {
             // slide in doctor
             .fromTo(doctor, 1, {
                 opacity: 1,
-                x: 700
+                x: 300
             }, {
                 x: 0,
                 ease: "power1.inOut"
@@ -222,7 +224,7 @@ window.onload = function () {
                 ease: "power1.inOut"
             })
             // fade in glows
-            .fromTo([glowClipboard, glowJacket], 1, {
+            .fromTo([glowClipboard, secondPerson], 0.5, {
                 opacity: 0
             }, {
                 opacity: 0.5
@@ -257,6 +259,7 @@ window.onload = function () {
                 opacity: 0,
                 scale: 0
             }, {
+                delay: 2.5,
                 scale: 1.1,
                 opacity: 1,
                 ease: "power1.inOut"
@@ -317,6 +320,7 @@ window.onload = function () {
                 scale: 0,
                 x: 150
             }, {
+                delay: 2.5,
                 scale: 1.1,
                 opacity: 1,
                 ease: "power1.inOut",
@@ -383,6 +387,7 @@ window.onload = function () {
                 opacity: 0,
                 scale: 0
             }, {
+                delay: 2.5,
                 scale: .6,
                 opacity: 1,
                 ease: "power1.inOut"
@@ -546,6 +551,13 @@ window.onload = function () {
             scaleX: 1.1,
             yoyo: true,
             repeat: -1
+        })
+    }
+
+    // code to make first slide fade in
+    function reset() {
+        TweenMax.set([myth1Title, myth2Title, table, cageLeft, person, cageRight, glowRight, glowLeft, glowPerson, secondPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, beakers, nextSteps, info], {
+            clearProps: "all"
         })
     }
 
@@ -735,4 +747,4 @@ window.onload = function () {
     //     }
     // }
 
-}
+// }
