@@ -106,6 +106,8 @@ h2 {
     left: 0;
     top: 0;
     width: 100%;
+    margin:0;
+    /* max-width: 70vw; */
     /* Full width */
     height: 100%;
     /* Full height */
@@ -117,13 +119,17 @@ h2 {
     /* Black w/ opacity */
 }
 
+
 /* Modal Content */
 .modal-content {
     background-color: #E1F1F9;
     margin: auto;
     padding: 20px;
     border: 2px solid #25AAE1;
-    width: 60%;
+    /* width: 100%; */
+    width: 70%;
+    max-width: 80vw;
+
 }
 
 /* The Close Button */
@@ -437,11 +443,4 @@ li {
     .container{
         margin-bottom: 0px;
     }
-    /* header#branding.top-bar {
-        display: none;
-        position: absolute;
-        top:0;
-        right:0;
-        background-color: #00000000;
-    } */
 }
