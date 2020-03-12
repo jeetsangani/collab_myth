@@ -220,64 +220,9 @@
 
             if ((event.keyCode && event.keyCode == 39) || (event.key && event.key.toLowerCase() == 'arrowright')) {
                 updateHorizontalTimeline('next'); // move to next event
-
-                // get id and class names for screen animations
-                let myDate1 = document.getElementById('fadeinOne').getAttribute('class');
-                let myDate2 = document.getElementById('fadein2').getAttribute('class');
-                let myDate3 = document.getElementById('fadein3').getAttribute('class');
-                let myDate4 = document.getElementById('fadein4').getAttribute('class');
-                let myDate5 = document.getElementById('fadein5').getAttribute('class');
-                let myID1 = document.getElementById('fadeinOne').getAttribute('id');
-                let myID2 = document.getElementById('fadein2').getAttribute('id');
-                let myID3 = document.getElementById('fadein3').getAttribute('id');
-                let myID4 = document.getElementById('fadein4').getAttribute('id');
-                let myID5 = document.getElementById('fadein5').getAttribute('id');
-
-                if (myID1 == 'fadeinOne' && myDate1 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen1();
-                } 
-                if (myID2 == 'fadein2' && myDate2 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen2();
-                }
-                if (myID3 == 'fadein3' && myDate3 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen3();
-                }
-                if (myID4 == 'fadein4' && myDate4 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen4();
-                }
-                if (myID5 == 'fadein5' && myDate5 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen5();
-                }
             } else if ((event.keyCode && event.keyCode == 37) || (event.key && event.key.toLowerCase() == 'arrowleft')) {
                 updateHorizontalTimeline('prev'); // move to prev event
 
-                // get id and class names for screen animations
-                let myDate1 = document.getElementById('fadeinOne').getAttribute('class');
-                let myDate2 = document.getElementById('fadein2').getAttribute('class');
-                let myDate3 = document.getElementById('fadein3').getAttribute('class');
-                let myDate4 = document.getElementById('fadein4').getAttribute('class');
-                let myDate5 = document.getElementById('fadein5').getAttribute('class');
-                let myID1 = document.getElementById('fadeinOne').getAttribute('id');
-                let myID2 = document.getElementById('fadein2').getAttribute('id');
-                let myID3 = document.getElementById('fadein3').getAttribute('id');
-                let myID4 = document.getElementById('fadein4').getAttribute('id');
-                let myID5 = document.getElementById('fadein5').getAttribute('id');
-
-                if (myID1 == 'fadeinOne' && myDate1 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen1();
-                } 
-                if (myID2 == 'fadein2' && myDate2 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen2();
-                }
-                if (myID3 == 'fadein3' && myDate3 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen3();
-                }
-                if (myID4 == 'fadein4' && myDate4 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen4();
-                }
-                if (myID5 == 'fadein5' && myDate5 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
-                    fadeInScreen5();
-                }
             }
         });
     };
