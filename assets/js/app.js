@@ -582,12 +582,14 @@ window.onload = function () {
     let audio2 = document.getElementById('myth102');
     let audio3 = document.getElementById('myth103');
     let audio4 = document.getElementById('myth201');
+    let audio5 = document.getElementById('myth202');
 
     // Get the <span> element that closes the modal
     let close = document.getElementsByClassName("close")[0];
     let close1 = document.getElementsByClassName("close1")[0];
     let close2 = document.getElementsByClassName("close2")[0];
     let close3 = document.getElementsByClassName("close3")[0];
+    let close4 = document.getElementsByClassName("close4")[0];
 
     // When the user clicks the button, open the modal 
     mainPerson.onclick = function () {
@@ -607,6 +609,10 @@ window.onload = function () {
         modal4.style.display = "block";
         audio4.play();
     }
+    person2.onclick = function () {
+        modal5.style.display = "block";
+        audio5.play();
+    }
 
     // When the user clicks on <span> (x), close the modal
     close.onclick = function () {
@@ -625,6 +631,10 @@ window.onload = function () {
         modal4.style.display = "none";
         audio4.pause();
     }
+    close4.onclick = function () {
+        modal5.style.display = "none";
+        audio5.pause();
+    }
 
 
     // When the user clicks anywhere outside of the modal, close it
@@ -638,8 +648,11 @@ window.onload = function () {
         if (event.target == modal3) {
             modal3.style.display = "none";
         }
-        if (event.target == modal3) {
+        if (event.target == modal4) {
             modal4.style.display = "none";
+        }
+        if (event.target == modal5) {
+            modal5.style.display = "none";
         }
     }
 
