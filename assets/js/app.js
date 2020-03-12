@@ -1,4 +1,4 @@
-// window.onload = function () {
+window.onload = function () {
 
     // targeting the svg objects in the html
     let first = document.getElementById('firstPage').contentDocument;
@@ -747,4 +747,4 @@
     //     }
     // }
 
-// }
+}
