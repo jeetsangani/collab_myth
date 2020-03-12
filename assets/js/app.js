@@ -635,6 +635,10 @@ window.onload = function () {
         modal7.style.display = "block";
         audio7.play();
     }
+    needle.onclick = function () {
+        modal8.style.display = "block";
+        audio8.play();
+    }
 
     // When the user clicks on <span> (x), close the modal
     close.onclick = function () {
@@ -665,27 +669,53 @@ window.onload = function () {
         modal7.style.display = "none";
         audio7.pause(); 
     }
+    close7.onclick = function () {
+        modal8.style.display = "none";
+        audio8.pause();
+    }
 
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal1) {
             modal1.style.display = "none";
+            audio1.pause();
         }
         if (event.target == modal2) {
             modal2.style.display = "none";
+            audio2.pause();
         }
         if (event.target == modal3) {
             modal3.style.display = "none";
+            audio3.pause();
         }
         if (event.target == modal4) {
             modal4.style.display = "none";
+            audio4.pause();
         }
         if (event.target == modal5) {
             modal5.style.display = "none";
+            audio5.pause();
         }
         if (event.target == modal6) {
             modal6.style.display = "none";
+            audio6.pause();
+        }
+        if (event.target == modal7) {
+            modal7.style.display = "none";
+            audio7.pause();
+        }
+        if (event.target == modal8) {
+            modal8.style.display = "none";
+            audio8.pause();
+        }
+        if (event.target == modal9) {
+            modal9.style.display = "none";
+            audio9.pause();
+        }
+        if (event.target == modal10) {
+            modal10.style.display = "none";
+            audio10.pause();
         }
     }
 
