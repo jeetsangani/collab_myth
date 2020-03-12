@@ -395,3 +395,34 @@ li {
     top: 30px;
     left: 100px;
 }
+
+/* for phone with buttons */
+@media (max-width:800px) {
+    object {
+        max-width: 55vw;
+        height: auto;
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+    .main-container {
+        height: 61vh !important;
+    }
+    .container{
+        margin-bottom: 0px;
+    }
+}
+/* for iphone x and sumsung models with full screen no buttons */
+@media (min-width:800px) and (max-width:900px) {
+    object {
+        max-width: 46vw;
+        height: auto;
+        margin-left: 11rem;
+        margin-right: 11rem;
+    }
+    .main-container {
+        height: 62vh !important;
+    }
+    .container{
+        margin-bottom: 0px;
+    }
+}
