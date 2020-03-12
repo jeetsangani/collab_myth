@@ -639,6 +639,14 @@ window.onload = function () {
         modal8.style.display = "block";
         audio8.play();
     }
+    purpleBeaker.onclick = function () {
+        modal9.style.display = "block";
+        audio9.play();
+    }
+    greenBeaker.onclick = function () {
+        modal10.style.display = "block";
+        audio10.play();
+    }
 
     // When the user clicks on <span> (x), close the modal
     close.onclick = function () {
