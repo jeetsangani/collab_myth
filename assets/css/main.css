@@ -405,11 +405,23 @@ li {
         margin-right: 6rem;
     }
     .main-container {
+        /* height: 69vh !important; */
         height: 61vh !important;
+
     }
     .container{
         margin-bottom: 0px;
     }
+    header#branding.top-bar {
+        /* display: none; */
+        position: absolute;
+        top:0;
+        right:0;
+        width: 100%;
+        background-color: #00000000;
+        z-index: 1000;
+    }
+
 }
 /* for iphone x and sumsung models with full screen no buttons */
 @media (min-width:800px) and (max-width:900px) {
@@ -425,4 +437,11 @@ li {
     .container{
         margin-bottom: 0px;
     }
+    /* header#branding.top-bar {
+        display: none;
+        position: absolute;
+        top:0;
+        right:0;
+        background-color: #00000000;
+    } */
 }
