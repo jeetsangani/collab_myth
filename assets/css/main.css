@@ -123,13 +123,21 @@ h2 {
 /* Modal Content */
 .modal-content {
     background-color: #E1F1F9;
-    margin: auto;
+    /* margin: auto; */
     padding: 20px;
     border: 2px solid #25AAE1;
     /* width: 100%; */
-    width: 70%;
-    max-width: 80vw;
+    /* width: 70%; */
+    width: max-content;
+    max-width: 46%;
+    margin-left: 17vw;
+    min-height: 10vh;
+    min-width: 27%;
+}
 
+.modal-textbox {
+    text-align: justify;
+    padding-right: 2vw;
 }
 
 /* The Close Button */

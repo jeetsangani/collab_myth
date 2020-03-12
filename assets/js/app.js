@@ -64,23 +64,12 @@ window.onload = function () {
     let fadeIn_3 = new TimelineMax();
     let fadeIn_4 = new TimelineMax();
     let fadeIn_5 = new TimelineMax();
-    // let guineaPigShake = new TimelineMax({repeat: -1});
-    // let guineaPigShake2 = new TimelineMax({repeat: -1});
-    // let winkwink = new TimelineMax({repeat: -1});
 
     let fadeOut_1 = new TimelineMax();
     let fadeOut_2 = new TimelineMax();
     let fadeOut_3 = new TimelineMax();
     let fadeOut_4 = new TimelineMax();
     let fadeOut_5 = new TimelineMax();
-
-
-    // code to make first slide fade in
-    // function reset() {
-    //     TweenMax.set([myth1Title, myth2Title, table, cageLeft, person, cageRight, glowRight, glowLeft, glowPerson, secondPerson, glowJacket, glowClipboard, glowChart, glowMatress, glowNeedle, glowBottle, glowBottleEnd, beakers, nextSteps, info], {
-    //         clearProps: "all"
-    //     })
-    // }
 
     // functions to make items fade in or appear
     function fadeInScreen1(clicked) {
@@ -143,24 +132,6 @@ window.onload = function () {
             })
         // animate glows
         glowItems();
-        // animate guinea pigs
-        // guineaPigShake
-        // .fromTo(guineaPig, 0.01, {
-        //     x:-4
-        // },{
-        //     x:4, 
-        //     clearProps:"x", 
-        //     repeat:20,
-        // },3)
-        // guineaPigShake2
-        // .fromTo(guineaPig2, 0.01, {
-        //     x:-4
-        // },{
-        //     x:4, 
-        //     clearProps:"x", 
-        //     repeat:20,
-        //     delay: 1
-        // },3)
 
         // change cursor to pointer on clickable items
         cageLeft.style.cursor = "pointer";
@@ -231,19 +202,10 @@ window.onload = function () {
             })
         // animate glows
         glowItems();
-        // wink
-        // winkwink.fromTo(wink, 1, {
-        //     y: -10
-        // },{
-        //     y: 0,
-        //     delay: 3.5
-        // })
-        // .to(wink, 1, {
-        //     y: -10
-        // })
+
 
         // change cursor to pointer on clickable items
-        clipboard.style.cursor = "pointer";
+        person2.style.cursor = "pointer";
         jacket.style.cursor = "pointer";
 
     }
@@ -392,14 +354,7 @@ window.onload = function () {
                 opacity: 1,
                 ease: "power1.inOut"
             })
-            // .fromTo(nextSteps, 1, {
-            //     scale: 1
-            // },{
-            //     scale: 0.8,
-            //     ease: "power1.inOut",
-            //     repeat: 2,
-            //     yoyo: true
-            // })
+
             // fade in info
             .fromTo(info, 1.5, {
                 opacity: 0
