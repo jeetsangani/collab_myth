@@ -673,6 +673,14 @@ window.onload = function () {
         modal8.style.display = "none";
         audio8.pause();
     }
+    close8.onclick = function () {
+        modal9.style.display = "none";
+        audio9.pause();
+    }
+    close9.onclick = function () {
+        modal10.style.display = "none";
+        audio10.pause();
+    }
 
 
     // When the user clicks anywhere outside of the modal, close it
