@@ -588,9 +588,9 @@ window.onload = function () {
     let close4 = document.getElementsByClassName("close4")[0];
     let close5 = document.getElementsByClassName("close5")[0];
     let close6 = document.getElementsByClassName("close6")[0];
-    let close7 = document.getElementsByClassName("close6")[0];
-    let close8 = document.getElementsByClassName("close6")[0];
-    let close9 = document.getElementsByClassName("close6")[0];
+    let close7 = document.getElementsByClassName("close7")[0];
+    let close8 = document.getElementsByClassName("close8")[0];
+    let close9 = document.getElementsByClassName("close9")[0];
 
 
     //Triggering audio files
