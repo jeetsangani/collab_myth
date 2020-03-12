@@ -13,7 +13,7 @@
     let glowRight = second.getElementById('glowRight');
     let glowLeft = second.getElementById('glowLeft');
     let glowPerson = second.getElementById('glowPerson');
-    let mainPerson = second.getElementById('person');
+    // let mainPerson = second.getElementById('person');
     let myth1Title = second.getElementById('title');
     let table = second.getElementById('table');
     let cageLeft = second.getElementById('cageLeft');
@@ -224,7 +224,7 @@
                 ease: "power1.inOut"
             })
             // fade in glows
-            .fromTo([glowClipboard, secondPerson], 0.5, {
+            .fromTo([glowJacket, secondPerson], 0.5, {
                 opacity: 0
             }, {
                 opacity: 0.5
@@ -618,7 +618,8 @@
     let audio10 = document.getElementById('myth403');
 
     // When the user clicks the button, open the modal 
-    mainPerson.onclick = function () {
+    // mainPerson.onclick = function () {
+    person.onclick = function () {
         modal1.style.display = "block";
         audio3.play();
 

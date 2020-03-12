@@ -265,9 +265,7 @@
 
                 if (myID1 == 'fadeinOne' && myDate1 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
                     fadeInScreen1();
-                } else {
-                    console.log('nope');
-                }
+                } 
                 if (myID2 == 'fadein2' && myDate2 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
                     fadeInScreen2();
                 }
