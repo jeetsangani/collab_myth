@@ -3881,7 +3881,7 @@ body {
 .js .cd-h-timeline__event {
     position: absolute;
     z-index: 1;
-    width: 100vw;
+    /* width: 100vw; */ 
     left: 0;
     top: 0;
     -webkit-transform: translateX(-100%);
