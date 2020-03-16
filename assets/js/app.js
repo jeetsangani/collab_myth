@@ -587,7 +587,8 @@ window.onload = function () {
     // mainPerson.onclick = function () {
     person.onclick = function () {
         modal1.style.display = "block";
-        $(".voiceovers").trigger("pause").prop('currentTime',0);
+        $(".voiceovers").trigger("pause");
+        // $(".voiceovers").prop('currentTime',0);
         $('#myth103').trigger('play');
         // audio3.play();
 
@@ -632,7 +633,7 @@ window.onload = function () {
     // When the user clicks on <span> (x), close the modal
     close.onclick = function () {
         modal1.style.display = "none";
-        $('#myth103').trigger('pause');
+        $('#myth103').trigger('pause').prop('currentTime',0);
         // $('#myth103').prop('currentTime',0);
         // audio3.pause();
     }
