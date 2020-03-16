@@ -123,13 +123,13 @@ h2 {
 /* Modal Content */
 .modal-content {
     background-color: #E1F1F9;
-    margin: auto;
+    margin: 5vh auto;
     padding: 20px;
     border: 2px solid #25AAE1;
     /* width: 100%; */
     /* width: 70%; */
     width: max-content;
-    max-width: 50%;
+    max-width: 65%;
     /* margin-left: 17vw; */
     min-height: 10vh;
     min-width: 27%;
@@ -413,13 +413,18 @@ li {
 /* for ipad (landscape view) */
 @media (max-width: 1024px) {
     .modal-content {
-        max-width: 61%;
+        max-width: 65%;
         /* margin-left: 25vw; */
-        margin: auto;
+        margin: 5vh auto;
     }
 
     .modal-textbox {
         padding-right: 3vw;
+    }
+
+    .js .cd-h-timeline__event {
+        width: 94vw;
+        padding: 55px 5%;
     }
 }
 
@@ -454,11 +459,16 @@ li {
         margin-left: 13vw;
         /* margin-top: -17vh; */
         font-size: 0.9rem;
-        margin: -17vh auto;
+        margin: -10vh auto;
     }
 
     .modal-textbox {
         padding-right: 5vw;
+    }
+
+    .js .cd-h-timeline__event {
+        width: 100vw;
+        padding: 40px 5%;
     }
 
 }
@@ -482,10 +492,15 @@ li {
         margin-left: 13vw;
         /* margin-top: -17vh; */
         font-size: 0.9rem;
-        margin: -17vh auto;
+        margin: -10vh auto;
     }
 
     .modal-textbox {
         padding-right: 5vw;
+    }
+
+    .js .cd-h-timeline__event {
+        width: 100vw;
+        padding: 40px 5%;
     }
 }
