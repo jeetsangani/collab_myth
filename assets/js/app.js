@@ -74,6 +74,13 @@ window.onload = function () {
     // functions to make items fade in or appear
     function fadeInScreen1(clicked) {
         reset()
+        // pause all audio 
+        $(".voiceovers").trigger("pause");
+        // play myth audio as page fades in, delay 2000ms
+        setTimeout(function(){
+            $("#myth1").trigger("play");
+        }, 2000);
+        
         // animate title
         TweenMax.set(myth1Title, {
             transformOrigin: "center center"
@@ -142,6 +149,7 @@ window.onload = function () {
 
     function fadeInScreen2(clicked) {
         reset()
+        $(".voiceovers").trigger("pause");
         // animate title
         TweenMax.set(myth2Title, {
             transformOrigin: "center center"
@@ -212,6 +220,7 @@ window.onload = function () {
 
     function fadeInScreen3(clicked) {
         reset()
+        $(".voiceovers").trigger("pause");
         // animate title
         TweenMax.set(myth3Title, {
             transformOrigin: "center center"
@@ -272,6 +281,7 @@ window.onload = function () {
 
     function fadeInScreen4(clicked) {
         reset()
+        $(".voiceovers").trigger("pause");
         // animate title
         TweenMax.set(myth4Title, {
             transformOrigin: "center center"
@@ -340,6 +350,7 @@ window.onload = function () {
 
     function fadeInScreen5(clicked) {
         reset()
+        $(".voiceovers").trigger("pause");
         // animate title
         TweenMax.set([nextSteps, info], {
             transformOrigin: "center center"
@@ -576,7 +587,9 @@ window.onload = function () {
     // mainPerson.onclick = function () {
     person.onclick = function () {
         modal1.style.display = "block";
-        audio3.play();
+        $(".voiceovers").trigger("pause").prop('currentTime',0);
+        $('#myth103').trigger('play');
+        // audio3.play();
 
     }
     cageLeft.onclick = function () {
@@ -619,7 +632,9 @@ window.onload = function () {
     // When the user clicks on <span> (x), close the modal
     close.onclick = function () {
         modal1.style.display = "none";
-        audio3.pause();
+        $('#myth103').trigger('pause');
+        // $('#myth103').prop('currentTime',0);
+        // audio3.pause();
     }
     close1.onclick = function () {
         modal2.style.display = "none";
