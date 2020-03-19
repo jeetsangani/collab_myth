@@ -24,11 +24,11 @@ body {
 /* have you use in media query Too / to set height and width */
 .main-container {
     height: 70vh !important;
-    background-color: rgba(255, 255, 255, 0.925);
+    background-color: rgba(255, 255, 255);
 }
 
 .timeline {
-    background-color: rgba(255, 255, 255, 0.849);
+    background-color: rgba(255, 255, 255);
 }
 
 object {
@@ -54,7 +54,7 @@ li {
 
 .js .cd-h-timeline__date::after {
 
-    border-color: rgba(12, 12, 160, 0.377);
+    /* border-color: rgba(12, 12, 160, 0.377); */
     /* border-color: hsl(var(--cd-color-3-h), var(--cd-color-3-s), calc(var(--cd-color-3-l)*0.9)); */
     background-color: hsl(0, 0%, 97%);
 }
@@ -124,7 +124,7 @@ h2 {
 /* Modal Content */
 .modal-content {
     background-color: #E1F1F9;
-    margin: 5vh auto;
+    margin: 5vh;
     padding: 20px;
     border: 2px solid #25AAE1;
     /* width: 100%; */
@@ -451,17 +451,8 @@ li {
 
 /* for ipad pro version */
 @media (max-width: 1366px) {
-    .modal-content {
-        max-width: 65%;
-        /* margin-left: 25vw; */
-        margin: 5vh auto;
-    }
     object {
         margin-left: 7rem;
-    }
-
-    .modal-textbox {
-        padding-right: 3vw;
     }
 
     .js .cd-h-timeline__event {
@@ -501,7 +492,7 @@ li {
 
     .modal-content {
         max-width: 75%;
-        margin-left: 13vw;
+        /* margin-left: 13vw; */
         /* margin-top: -17vh; */
         font-size: 0.9rem;
         margin: -10vh auto;
