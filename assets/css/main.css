@@ -412,6 +412,8 @@ li {
     left: 100px;
 }
 
+/* for Mute and unmute button */
+
 .unmute {
     background-image: url(http://franriavilla.in/images/unmute.png);
     background-size: cover;
@@ -423,6 +425,8 @@ li {
 .mute {
     background-image: url(http://franriavilla.in/images/mute.png);
 }
+
+/* for Mute and unmute button */
 
 /* for ipad (landscape view) */
 @media (max-width: 1024px) {
@@ -453,7 +457,7 @@ li {
 
     .main-container {
         /* height: 69vh !important; */
-        height: 61vh !important;
+        height: 63vh !important;
 
     }
 
