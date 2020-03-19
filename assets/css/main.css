@@ -435,6 +435,30 @@ li {
         /* margin-left: 25vw; */
         margin: 5vh auto;
     }
+    object {
+        margin-left: 7rem;
+    }
+
+    .modal-textbox {
+        padding-right: 3vw;
+    }
+
+    .js .cd-h-timeline__event {
+        width: 94vw;
+        padding: 55px 5%;
+    }
+}
+
+/* for ipad pro version */
+@media (max-width: 1366px) {
+    .modal-content {
+        max-width: 65%;
+        /* margin-left: 25vw; */
+        margin: 5vh auto;
+    }
+    object {
+        margin-left: 7rem;
+    }
 
     .modal-textbox {
         padding-right: 3vw;
