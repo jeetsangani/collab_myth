@@ -450,7 +450,7 @@ li {
 
 /* For desktop view */
 @media (min-width: 1367px) {
-    object, .tutorial_container{
+    object{
         margin-left: 5rem;
     }
 }
