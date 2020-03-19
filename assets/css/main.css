@@ -448,8 +448,15 @@ li {
     }
 }
 
+/* For desktop view */
+@media (min-width: 1367px) {
+    object, .tutorial_container{
+        margin-left: 5rem;
+    }
+}
+
 /* for ipad pro version */
-@media (max-width: 1366px) {
+@media (max-width: 1365px) {
     object {
         margin-left: 7rem;
     }
