@@ -55,7 +55,6 @@ li {
 .js .cd-h-timeline__date::after {
 
     /* border-color: rgba(12, 12, 160, 0.377); */
-    /* border-color: hsl(var(--cd-color-3-h), var(--cd-color-3-s), calc(var(--cd-color-3-l)*0.9)); */
     background-color: hsl(0, 0%, 97%);
 }
 
