@@ -58,6 +58,9 @@ window.onload = function () {
     let nextSteps = next.getElementById('nextSteps');
     let info = next.getElementById('info');
 
+    // target play/mute buttons
+    let audioBtn = document.getElementById('audioBtn');
+
     // create timelines
     let fadeIn_1 = new TimelineMax();
     let fadeIn_2 = new TimelineMax();
@@ -70,6 +73,22 @@ window.onload = function () {
     let fadeOut_3 = new TimelineMax();
     let fadeOut_4 = new TimelineMax();
     let fadeOut_5 = new TimelineMax();
+
+
+    // toggle audio button to mute or unmute
+    // while muted, all sounds are disabled
+    // while unmuted, all sounds can play
+    audioBtn.onclick = function muteSounds () {
+        $(this).toggleClass('mute');
+        let audio = document.getElementsByTagName('audio');
+        console.log(audio);
+        if ($(this).hasClass("mute")){
+            for(i=0; i<audio.length; i++) audio[i].muted = true;
+        }else{
+            for(i=0; i<audio.length; i++) audio[i].muted = false;
+        }
+        
+    }
 
     // functions to make items fade in or appear
     function fadeInScreen1(clicked) {
@@ -600,6 +619,7 @@ window.onload = function () {
     let audio8 = document.getElementById('myth401');
     let audio9 = document.getElementById('myth402');
     let audio10 = document.getElementById('myth403');
+
 
     // When the user clicks the button, open the modal 
     // mainPerson.onclick = function () {
