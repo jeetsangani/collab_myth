@@ -76,10 +76,10 @@ window.onload = function () {
         reset()
         // pause all audio 
         $(".voiceovers").trigger("pause");
-        // play myth audio as page fades in, delay 2000ms
+        // play myth audio as page fades in, delay 3000ms
         setTimeout(function(){
             $("#myth1").trigger("play");
-        }, 2000);
+        }, 3000);
         
         // animate title
         TweenMax.set(myth1Title, {
@@ -148,8 +148,14 @@ window.onload = function () {
     }
 
     function fadeInScreen2(clicked) {
-        reset()
+        reset()      
+        // pause all audio 
         $(".voiceovers").trigger("pause");
+        // play myth audio as page fades in, delay 3000ms
+        setTimeout(function(){
+            $("#myth2").trigger("play");
+        }, 3000);
+
         // animate title
         TweenMax.set(myth2Title, {
             transformOrigin: "center center"
@@ -220,7 +226,13 @@ window.onload = function () {
 
     function fadeInScreen3(clicked) {
         reset()
+        // pause all audio 
         $(".voiceovers").trigger("pause");
+        // play myth audio as page fades in, delay 3000ms
+        setTimeout(function(){
+            $("#myth3").trigger("play");
+        }, 3000);
+        
         // animate title
         TweenMax.set(myth3Title, {
             transformOrigin: "center center"
@@ -281,7 +293,13 @@ window.onload = function () {
 
     function fadeInScreen4(clicked) {
         reset()
+        // pause all audio 
         $(".voiceovers").trigger("pause");
+        // play myth audio as page fades in, delay 3000ms
+        setTimeout(function(){
+            $("#myth4").trigger("play");
+        }, 3000);
+
         // animate title
         TweenMax.set(myth4Title, {
             transformOrigin: "center center"
