@@ -58,6 +58,9 @@ window.onload = function () {
     let nextSteps = next.getElementById('nextSteps');
     let info = next.getElementById('info');
 
+    // target play/mute buttons
+    let audioBtn = document.getElementById('audioBtn');
+
     // create timelines
     let fadeIn_1 = new TimelineMax();
     let fadeIn_2 = new TimelineMax();
@@ -70,6 +73,22 @@ window.onload = function () {
     let fadeOut_3 = new TimelineMax();
     let fadeOut_4 = new TimelineMax();
     let fadeOut_5 = new TimelineMax();
+
+
+    // toggle audio button to mute or unmute
+    // while muted, all sounds are disabled
+    // while unmuted, all sounds can play
+    audioBtn.onclick = function muteSounds () {
+        $(this).toggleClass('mute');
+        let audio = document.getElementsByTagName('audio');
+        console.log(audio);
+        if ($(this).hasClass("mute")){
+            for(i=0; i<audio.length; i++) audio[i].muted = true;
+        }else{
+            for(i=0; i<audio.length; i++) audio[i].muted = false;
+        }
+        
+    }
 
     // functions to make items fade in or appear
     function fadeInScreen1(clicked) {
@@ -148,8 +167,14 @@ window.onload = function () {
     }
 
     function fadeInScreen2(clicked) {
-        reset()
+        reset()      
+        // pause all audio 
         $(".voiceovers").trigger("pause");
+        // play myth audio as page fades in, delay 2000ms
+        setTimeout(function(){
+            $("#myth2").trigger("play");
+        }, 2000);
+
         // animate title
         TweenMax.set(myth2Title, {
             transformOrigin: "center center"
@@ -220,7 +245,13 @@ window.onload = function () {
 
     function fadeInScreen3(clicked) {
         reset()
+        // pause all audio 
         $(".voiceovers").trigger("pause");
+        // play myth audio as page fades in, delay 2000ms
+        setTimeout(function(){
+            $("#myth3").trigger("play");
+        }, 2000);
+        
         // animate title
         TweenMax.set(myth3Title, {
             transformOrigin: "center center"
@@ -281,7 +312,13 @@ window.onload = function () {
 
     function fadeInScreen4(clicked) {
         reset()
+        // pause all audio 
         $(".voiceovers").trigger("pause");
+        // play myth audio as page fades in, delay 3000ms
+        setTimeout(function(){
+            $("#myth4").trigger("play");
+        }, 3000);
+
         // animate title
         TweenMax.set(myth4Title, {
             transformOrigin: "center center"
@@ -583,6 +620,7 @@ window.onload = function () {
     let audio9 = document.getElementById('myth402');
     let audio10 = document.getElementById('myth403');
 
+
     // When the user clicks the button, open the modal 
     // mainPerson.onclick = function () {
     person.onclick = function () {
@@ -595,39 +633,57 @@ window.onload = function () {
     }
     cageLeft.onclick = function () {
         modal2.style.display = "block";
-        audio1.play();
+        $(".voiceovers").trigger("pause");
+        $('#myth101').trigger('play');
+        // audio1.play();
     }
     cageRight.onclick = function () {
         modal3.style.display = "block";
-        audio2.play();
+        $(".voiceovers").trigger("pause");
+        $('#myth102').trigger('play');
+        // audio2.play();
     }
     doctor.onclick = function () {
         modal4.style.display = "block";
-        audio4.play();
+        $(".voiceovers").trigger("pause");
+        $('#myth201').trigger('play');
+        // audio4.play();
     }
     person2.onclick = function () {
         modal5.style.display = "block";
-        audio5.play();
+        $(".voiceovers").trigger("pause");
+        $('#myth202').trigger('play');
+        // audio5.play();
     }
     matress.onclick = function () {
         modal6.style.display = "block";
-        audio6.play();
+        $(".voiceovers").trigger("pause");
+        $('#myth301').trigger('play');
+        // audio6.play();
     }
     chart.onclick = function () {
         modal7.style.display = "block";
-        audio7.play();
+        $(".voiceovers").trigger("pause");
+        $('#myth302').trigger('play');
+        // audio7.play();
     }
     needle.onclick = function () {
         modal8.style.display = "block";
-        audio8.play();
+        $(".voiceovers").trigger("pause");
+        $('#myth401').trigger('play');
+        // audio8.play();
     }
     purpleBeaker.onclick = function () {
         modal9.style.display = "block";
-        audio9.play();
+        $(".voiceovers").trigger("pause");
+        $('#myth402').trigger('play');
+        // audio9.play();
     }
     greenBeaker.onclick = function () {
         modal10.style.display = "block";
-        audio10.play();
+        $(".voiceovers").trigger("pause");
+        $('#myth403').trigger('play');
+        // audio10.play();
     }
 
     // When the user clicks on <span> (x), close the modal
@@ -639,39 +695,48 @@ window.onload = function () {
     }
     close1.onclick = function () {
         modal2.style.display = "none";
-        audio1.pause();
+        $('#myth101').trigger('pause').prop('currentTime',0);
+        // audio1.pause();
     }
     close2.onclick = function () {
         modal3.style.display = "none";
-        audio2.pause();
+        $('#myth102').trigger('pause').prop('currentTime',0);
+        // audio2.pause();
     }
     close3.onclick = function () {
         modal4.style.display = "none";
-        audio4.pause();
+        $('#myth201').trigger('pause').prop('currentTime',0);
+        // audio4.pause();
     }
     close4.onclick = function () {
         modal5.style.display = "none";
-        audio5.pause();
+        $('#myth202').trigger('pause').prop('currentTime',0);
+        // audio5.pause();
     }
     close5.onclick = function () {
         modal6.style.display = "none";
-        audio6.pause();
+        $('#myth301').trigger('pause').prop('currentTime',0);
+        // audio6.pause();
     }
     close6.onclick = function () {
         modal7.style.display = "none";
-        audio7.pause(); 
+        $('#myth302').trigger('pause').prop('currentTime',0);
+        // audio7.pause(); 
     }
     close7.onclick = function () {
         modal8.style.display = "none";
-        audio8.pause();
+        $('#myth401').trigger('pause').prop('currentTime',0);
+        // audio8.pause();
     }
     close8.onclick = function () {
         modal9.style.display = "none";
-        audio9.pause();
+        $('#myth402').trigger('pause').prop('currentTime',0);
+        // audio9.pause();
     }
     close9.onclick = function () {
         modal10.style.display = "none";
-        audio10.pause();
+        $('#myth403').trigger('pause').prop('currentTime',0);
+        // audio10.pause();
     }
 
 
