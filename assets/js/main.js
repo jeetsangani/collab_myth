@@ -51,7 +51,7 @@
         resetTimelinePosition(timeline, 'next');
     };
 
-    initEvents(timeline) {
+    function initEvents(timeline) {
         var self = timeline;
         // click on arrow navigation
         self.navigation[0].addEventListener('click', function (event) {
