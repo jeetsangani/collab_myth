@@ -1,2 +1,13 @@
-let voice = document.getElementsByClassName("unmute");
-let audio = document.getElementsByClassName("voiceover");
+$("#audioBtn").click(function() {
+    
+    if ($(this).hasClass("unmute")) {
+        
+        audio.volume = 1;
+        
+    } else {
+        
+        audio.volume = 0;
+        
+    }
+    
+});
