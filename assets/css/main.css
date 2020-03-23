@@ -428,15 +428,18 @@ li {
 /* for Mute and unmute button */
 
 .unmute {
-    background-image: url(http://franriavilla.in/images/unmute.png);
-    background-size: cover;
+    background-image: url(./../icons/audio.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 35px;
     height: 30px;
     cursor: pointer;
 }
 
 .mute {
-    background-image: url(http://franriavilla.in/images/mute.png);
+    background-image: url(./../icons/mute.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* for Mute and unmute button */
