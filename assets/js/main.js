@@ -50,8 +50,8 @@
         selectNewDate(timeline, timeline.selectedDate);
         resetTimelinePosition(timeline, 'next');
     };
-2
-    function initEvents(timeline) {
+
+    initEvents(timeline) {
         var self = timeline;
         // click on arrow navigation
         self.navigation[0].addEventListener('click', function (event) {
