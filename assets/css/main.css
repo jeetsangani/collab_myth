@@ -137,7 +137,7 @@ h2 {
 /* Modal Content */
 .modal-content {
     background-color: #E1F1F9;
-    margin: 5vh;
+    margin: 5vh auto;
     padding: 20px;
     border: 2px solid #25AAE1;
     /* width: 100%; */
