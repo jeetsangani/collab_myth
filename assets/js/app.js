@@ -608,21 +608,7 @@ window.onload = function () {
     let close9 = document.getElementsByClassName("close9")[0];
 
 
-    //Triggering audio files
-    let audio1 = document.getElementById('myth101');
-    let audio2 = document.getElementById('myth102');
-    let audio3 = document.getElementById('myth103');
-    let audio4 = document.getElementById('myth201');
-    let audio5 = document.getElementById('myth202');
-    let audio6 = document.getElementById('myth301');
-    let audio7 = document.getElementById('myth302');
-    let audio8 = document.getElementById('myth401');
-    let audio9 = document.getElementById('myth402');
-    let audio10 = document.getElementById('myth403');
-
-
     // When the user clicks the button, open the modal 
-    // mainPerson.onclick = function () {
     person.onclick = function () {
         modal1.style.display = "block";
         $(".voiceovers").trigger("pause");
