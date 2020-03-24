@@ -689,7 +689,7 @@ window.onload = function () {
     // When the user clicks on <span> (x), close the modal
     close.onclick = function () {
         modal1.style.display = "none";
-        $('#myth103').trigger('pause').prop('currentTime',0);
+        // $('#myth103').trigger('pause').prop('currentTime',0);
         // $('#myth103').prop('currentTime',0);
         // audio3.pause();
     }
