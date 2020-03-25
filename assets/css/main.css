@@ -8,6 +8,38 @@ body {
     max-height: 100%;
 }
 
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 body {
     background-image: url(../img/back_ground_iimg_1.jpg);
     background-size: cover;
@@ -33,6 +65,7 @@ body {
     background: none;
     background: none;
 }
+
 .js .cd-h-timeline__dates::before {
     left: 0;
     background: none;
@@ -451,6 +484,7 @@ li {
         /* margin-left: 25vw; */
         margin: 5vh auto;
     }
+
     object {
         margin-left: 7rem;
     }
@@ -467,7 +501,7 @@ li {
 
 /* For desktop view */
 @media (min-width: 1367px) {
-    object{
+    object {
         margin-left: 5rem;
     }
 }
