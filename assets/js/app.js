@@ -1,4 +1,14 @@
+$('#webpage').hide();
 window.onload = function () {
+
+
+    $('#preloader').show();
+    $('#webpage').hide();
+    $(document).ready(function () {
+        console.log("fully loaded !!!");
+        $('#preloader').hide();
+        $('#webpage').show();
+    });
 
     // targeting the svg objects in the html
     let first = document.getElementById('firstPage').contentDocument;
@@ -78,16 +88,16 @@ window.onload = function () {
     // toggle audio button to mute or unmute
     // while muted, all sounds are disabled
     // while unmuted, all sounds can play
-    audioBtn.onclick = function muteSounds () {
+    audioBtn.onclick = function muteSounds() {
         $(this).toggleClass('mute');
         let audio = document.getElementsByTagName('audio');
         console.log(audio);
-        if ($(this).hasClass("mute")){
-            for(i=0; i<audio.length; i++) audio[i].muted = true;
-        }else{
-            for(i=0; i<audio.length; i++) audio[i].muted = false;
+        if ($(this).hasClass("mute")) {
+            for (i = 0; i < audio.length; i++) audio[i].muted = true;
+        } else {
+            for (i = 0; i < audio.length; i++) audio[i].muted = false;
         }
-        
+
     }
 
     // functions to make items fade in or appear
@@ -96,10 +106,10 @@ window.onload = function () {
         // pause all audio 
         $(".voiceovers").trigger("pause");
         // play myth audio as page fades in, delay 2000ms
-        setTimeout(function(){
+        setTimeout(function () {
             $("#myth1").trigger("play");
         }, 2000);
-        
+
         // animate title
         TweenMax.set(myth1Title, {
             transformOrigin: "center center"
@@ -167,11 +177,11 @@ window.onload = function () {
     }
 
     function fadeInScreen2(clicked) {
-        reset()      
+        reset()
         // pause all audio 
         $(".voiceovers").trigger("pause");
         // play myth audio as page fades in, delay 2000ms
-        setTimeout(function(){
+        setTimeout(function () {
             $("#myth2").trigger("play");
         }, 2000);
 
@@ -248,10 +258,10 @@ window.onload = function () {
         // pause all audio 
         $(".voiceovers").trigger("pause");
         // play myth audio as page fades in, delay 2000ms
-        setTimeout(function(){
+        setTimeout(function () {
             $("#myth3").trigger("play");
         }, 2000);
-        
+
         // animate title
         TweenMax.set(myth3Title, {
             transformOrigin: "center center"
@@ -315,7 +325,7 @@ window.onload = function () {
         // pause all audio 
         $(".voiceovers").trigger("pause");
         // play myth audio as page fades in, delay 3000ms
-        setTimeout(function(){
+        setTimeout(function () {
             $("#myth4").trigger("play");
         }, 3000);
 
@@ -681,47 +691,47 @@ window.onload = function () {
     }
     close1.onclick = function () {
         modal2.style.display = "none";
-        $('#myth101').trigger('pause').prop('currentTime',0);
+        $('#myth101').trigger('pause').prop('currentTime', 0);
         // audio1.pause();
     }
     close2.onclick = function () {
         modal3.style.display = "none";
-        $('#myth102').trigger('pause').prop('currentTime',0);
+        $('#myth102').trigger('pause').prop('currentTime', 0);
         // audio2.pause();
     }
     close3.onclick = function () {
         modal4.style.display = "none";
-        $('#myth201').trigger('pause').prop('currentTime',0);
+        $('#myth201').trigger('pause').prop('currentTime', 0);
         // audio4.pause();
     }
     close4.onclick = function () {
         modal5.style.display = "none";
-        $('#myth202').trigger('pause').prop('currentTime',0);
+        $('#myth202').trigger('pause').prop('currentTime', 0);
         // audio5.pause();
     }
     close5.onclick = function () {
         modal6.style.display = "none";
-        $('#myth301').trigger('pause').prop('currentTime',0);
+        $('#myth301').trigger('pause').prop('currentTime', 0);
         // audio6.pause();
     }
     close6.onclick = function () {
         modal7.style.display = "none";
-        $('#myth302').trigger('pause').prop('currentTime',0);
+        $('#myth302').trigger('pause').prop('currentTime', 0);
         // audio7.pause(); 
     }
     close7.onclick = function () {
         modal8.style.display = "none";
-        $('#myth401').trigger('pause').prop('currentTime',0);
+        $('#myth401').trigger('pause').prop('currentTime', 0);
         // audio8.pause();
     }
     close8.onclick = function () {
         modal9.style.display = "none";
-        $('#myth402').trigger('pause').prop('currentTime',0);
+        $('#myth402').trigger('pause').prop('currentTime', 0);
         // audio9.pause();
     }
     close9.onclick = function () {
         modal10.style.display = "none";
-        $('#myth403').trigger('pause').prop('currentTime',0);
+        $('#myth403').trigger('pause').prop('currentTime', 0);
         // audio10.pause();
     }
 
@@ -789,7 +799,7 @@ window.onload = function () {
 
             if (myID1 == 'fadeinOne' && myDate1 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
                 fadeInScreen1();
-            } 
+            }
             if (myID2 == 'fadein2' && myDate2 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
                 fadeInScreen2();
             }
@@ -818,7 +828,7 @@ window.onload = function () {
 
             if (myID1 == 'fadeinOne' && myDate1 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
                 fadeInScreen1();
-            } 
+            }
             if (myID2 == 'fadein2' && myDate2 == 'cd-h-timeline__date cd-h-timeline__date--selected') {
                 fadeInScreen2();
             }
@@ -832,6 +842,6 @@ window.onload = function () {
                 fadeInScreen5();
             }
         }
-    });    
+    });
 
 }
