@@ -1,14 +1,4 @@
-$('#webpage').hide();
 window.onload = function () {
-
-
-    $('#preloader').show();
-    $('#webpage').hide();
-    $(document).ready(function () {
-        console.log("fully loaded !!!");
-        $('#preloader').hide();
-        $('#webpage').show();
-    });
 
     // targeting the svg objects in the html
     let first = document.getElementById('firstPage').contentDocument;
