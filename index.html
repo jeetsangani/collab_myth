@@ -11,14 +11,14 @@
   <script rel="preload" src="https://kit.fontawesome.com/623a498c0a.js" crossorigin="anonymous"></script>
   <script rel="preload" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script>
-    $('#webpage').hide();
-    $('#preloader').show();
+    // $('#webpage').hide();
+    // $('#preloader').show();
     $(window).on('load', function () {
       $('#preloader').show();
       $(document).ready(function () {
         console.log("fully loaded !!!");
         $('#preloader').hide();
-        $('#webpage').show();
+        $('#webpage').css('opacity', '1');
         // $('#webpage').css("opacity", "1");
       });
     });
@@ -43,7 +43,7 @@
   </div>
 
 
-  <div id="webpage">
+  <div id="webpage" style="opacity:0;">
     <!-- Audio Files loading -->
     <audio id="myth1" class="voiceover">
       <source src="audio/Myth1.mp3"></audio>

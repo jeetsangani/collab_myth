@@ -19,6 +19,13 @@ body {
     animation: spin 2s linear infinite;
 }
 
+#preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0px 0px -50px;
+}
+
 /* Safari */
 @-webkit-keyframes spin {
     0% {
